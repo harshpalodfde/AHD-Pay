@@ -67,8 +67,8 @@ AHD is opinionated about scope: it is an offline UPI client, not a general SMS/U
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the full build instructions and project tour. The short version:
 
 ```bash
-git clone https://github.com/<your-org>/OffPayApp.git
-cd OffPayApp
+git clone https://github.com/harshpalodfde/AHD-Pay.git
+cd AHD-Pay
 # Create local.properties with sdk.dir=…
 ./gradlew :app:assembleDebug
 ```

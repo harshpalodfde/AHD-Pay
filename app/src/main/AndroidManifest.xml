@@ -12,19 +12,19 @@
     <uses-feature android:name="android.hardware.telephony" android:required="true" />
 
     <application
-        android:name=".OffPayApplication"
+        android:name=".AHDApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.OffPay"
+        android:theme="@style/Theme.AHD"
         tools:targetApi="34">
 
         <activity
             android:name=".presentation.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.OffPay.Splash"
+            android:theme="@style/Theme.AHD.Splash"
             android:windowSoftInputMode="adjustNothing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

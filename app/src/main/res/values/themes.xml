@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.OffPay" parent="android:Theme.Material.NoActionBar">
+    <style name="Theme.AHD" parent="android:Theme.Material.NoActionBar">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/black</item>
@@ -12,5 +12,5 @@
       devices we fall back to the regular black-window theme so cold start
       still flashes black, never white.
     -->
-    <style name="Theme.OffPay.Splash" parent="Theme.OffPay" />
+    <style name="Theme.AHD.Splash" parent="Theme.AHD" />
 </resources>

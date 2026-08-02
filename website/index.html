@@ -10,8 +10,8 @@
   <meta property="og:title" content="AHD" />
   <meta property="og:description" content="Send money over UPI. No internet. Just *99# and a phone signal." />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/png" href="assets/logos/icon.png" />
-  <link rel="apple-touch-icon" href="assets/logos/icon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/logos/icon.svg" />
+  <link rel="apple-touch-icon" href="assets/logos/icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -136,24 +136,6 @@
     .btn-outline:hover { box-shadow: 4px 4px 0 var(--border-s); transform: translate(-1px,-1px); }
     .btn-outline:active { box-shadow: none; transform: translate(3px,3px); }
 
-    .btn-setup {
-      background: transparent;
-      color: var(--lime);
-      border: 1px solid var(--lime);
-      box-shadow: 3px 3px 0 rgba(197, 245, 66, 0.15);
-    }
-    .btn-setup:hover { box-shadow: 4px 4px 0 rgba(197, 245, 66, 0.25); transform: translate(-1px,-1px); }
-    .btn-setup:active { box-shadow: none; transform: translate(3px,3px); }
-
-    .btn-git {
-      background: #24292e;
-      color: #ffffff;
-      border: 1px solid #3f4448;
-      box-shadow: 3px 3px 0 #1b1f23;
-    }
-    .btn-git:hover { box-shadow: 4px 4px 0 #1b1f23; transform: translate(-1px,-1px); }
-    .btn-git:active { box-shadow: none; transform: translate(3px,3px); }
-
     @media (max-width: 520px) {
       .btn { width: 100%; }
       .hero-btns { flex-direction: column; }
@@ -196,29 +178,6 @@
     .nav-dl:hover { box-shadow: 3px 3px 0 var(--lime-dim); transform: translate(-1px,-1px); }
     .nav-dl:active { box-shadow: none; transform: translate(2px,2px); }
 
-    .nav-star {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      border: 1px solid var(--border);
-      background: var(--surface-hi);
-      transition: border-color 150ms, background-color 150ms, transform 80ms;
-      -webkit-tap-highlight-color: transparent;
-      touch-action: manipulation;
-    }
-    .nav-star:hover {
-      border-color: #ffb300;
-      background: rgba(255,179,0,0.08);
-      transform: translate(-1px, -1px);
-      box-shadow: 2px 2px 0 rgba(255,179,0,0.2);
-    }
-    .nav-star:active {
-      transform: translate(1px, 1px);
-      box-shadow: none;
-    }
-    
     .nav-right {
       display: flex;
       align-items: center;
@@ -383,61 +342,15 @@
       padding: 18px 20px;
     }
 
-    /* ─── Video facade ─── */
-    .video-wrap {
+    /* ─── Demo photo ─── */
+    .demo-photo {
       margin-top: 44px;
-      aspect-ratio: 16/9;
-      position: relative;
       border: 1px solid var(--border);
       box-shadow: 6px 6px 0 var(--border);
       overflow: hidden;
-      cursor: pointer;
       background: var(--surface);
     }
-    .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
-    .video-facade {
-      position: absolute; inset: 0; display: flex;
-      flex-direction: column; align-items: center; justify-content: center;
-      background: var(--surface); z-index: 2; transition: opacity 180ms;
-    }
-    .video-facade.gone { opacity: 0; pointer-events: none; }
-    .video-facade img {
-      position: absolute; inset: 0; width: 100%; height: 100%;
-      object-fit: cover; opacity: 0.28;
-    }
-    .play-ring {
-      position: relative;
-      width: 60px; height: 60px;
-      border-radius: 50%;
-      background: rgba(0,0,0,0.76);
-      border: 2px solid var(--lime);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--lime);
-      transition: transform 150ms ease, background-color 150ms ease, color 150ms ease;
-    }
-    .video-facade:hover .play-ring {
-      transform: scale(1.1);
-      background: var(--lime);
-      color: var(--black);
-    }
-
-    /* ─── Screenshots strip ─── */
-    .shots {
-      display: flex; gap: 8px;
-      overflow-x: auto; scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none; margin-top: 24px;
-      padding-bottom: 2px; /* prevent border clipping */
-    }
-    .shots::-webkit-scrollbar { display: none; }
-    .shot {
-      flex: 0 0 auto; width: clamp(110px, 28vw, 176px);
-      scroll-snap-align: start;
-      border: 1px solid var(--border);
-      background: var(--surface-hi);
-    }
-    .shot img { width: 100%; aspect-ratio: 9/19.5; object-fit: cover; }
-    .shot-cap { padding: 8px 10px; font-size: 11px; font-weight: 600; color: var(--text-3); font-family: var(--mono); }
+    .demo-photo img { display: block; width: 100%; height: auto; }
 
     /* ─── Features grid ─── */
     .feat-grid {
@@ -586,26 +499,6 @@
     .foot-links { display: flex; flex-wrap: wrap; gap: 20px; font-size: 12px; color: var(--text-3); font-weight: 500; }
     .foot-links a:hover { color: var(--text-1); }
 
-    /* ─── Modal ─── */
-    #modal { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.72); backdrop-filter: blur(10px); align-items: center; justify-content: center; padding: 20px; }
-    #modal.on { display: flex; }
-    .modal-card {
-      background: var(--surface-hi);
-      border: 1px solid rgba(197,245,66,0.25);
-      box-shadow: 6px 6px 0 rgba(197,245,66,0.12);
-      padding: clamp(24px, 4vw, 40px);
-      max-width: 380px; width: 100%;
-      text-align: center;
-      animation: popIn 240ms cubic-bezier(.2,.8,.2,1);
-    }
-    @keyframes popIn { from { opacity: 0; transform: translateY(10px) scale(.97); } to { opacity: 1; transform: none; } }
-    .modal-card .lime-sq { width: 48px; height: 48px; background: var(--lime); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
-    .modal-card h3 { font-size: 17px; font-weight: 800; letter-spacing: -0.02em; color: var(--text-1); margin-bottom: 8px; }
-    .modal-card p { font-size: 13px; color: var(--text-2); line-height: 1.65; margin-bottom: 22px; }
-    .modal-cta { display: block; background: var(--lime); color: var(--black); font-weight: 700; font-size: 13px; padding: 13px; box-shadow: 3px 3px 0 var(--lime-dim); margin-bottom: 10px; transition: box-shadow 80ms, transform 80ms; }
-    .modal-cta:hover { box-shadow: 4px 4px 0 var(--lime-dim); transform: translate(-1px,-1px); }
-    .modal-skip { background: none; border: none; color: var(--text-3); font-size: 12px; cursor: pointer; padding: 4px; font-family: var(--sans); }
-    .modal-skip:hover { color: var(--text-2); }
   </style>
 </head>
 <body>
@@ -615,37 +508,19 @@
 <div class="ambient-glow-3" aria-hidden="true"></div>
 
 
-<!-- Modal -->
-<div id="modal" role="dialog" aria-modal="true">
-  <div class="modal-card">
-    <div class="lime-sq">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    </div>
-    <h3>One quick setup step</h3>
-    <p>AHD needs Accessibility Service to auto-dial *99#. Watch the guide (takes about 2 minutes).</p>
-    <a href="setup.html" class="modal-cta">Watch Setup Guide →</a>
-    <button class="modal-skip" id="modal-skip">Skip for now</button>
-  </div>
-</div>
-
 <!-- Nav -->
 <nav>
   <a href="index.html" class="nav-brand">
-    <img src="assets/logos/icon.png" alt="AHD" />
+    <img src="assets/logos/icon.svg" alt="AHD" />
     <span><span class="lime">AHD</span></span>
   </a>
   <div class="nav-links">
     <a href="#demo">Demo</a>
     <a href="#features">Features</a>
-    <a href="#pwa">PWA</a>
-    <a href="setup.html">Setup</a>
     <a href="faq.html">FAQ</a>
     <a href="about.html">About</a>
   </div>
   <div class="nav-right">
-    <a href="https://github.com/laksh-ya/offpayapp" target="_blank" rel="noopener" class="nav-star" aria-label="Star on GitHub">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #ffb300;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
-    </a>
     <a href="#download" class="nav-dl">Download</a>
     <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
       <span class="bar"></span>
@@ -660,8 +535,6 @@
   <div class="mobile-menu-links">
     <a href="#demo">Demo</a>
     <a href="#features">Features</a>
-    <a href="#pwa">PWA</a>
-    <a href="setup.html">Setup</a>
     <a href="faq.html">FAQ</a>
     <a href="about.html">About</a>
   </div>
@@ -675,25 +548,16 @@
     <h1>Pay over UPI.<br/><span class="lime">No internet.</span></h1>
     <p class="sub">AHD uses *99# (India's USSD-based UPI protocol) to send money, check balance, and scan QR codes entirely over your SIM's voice channel. Works on Airtel, Vi and BSNL with zero data.</p>
     <div class="hero-btns">
-      <a href="https://github.com/laksh-ya/offpayapp/releases" target="_blank" rel="noopener" class="btn btn-lime" id="apk-btn">
+      <a href="https://github.com/harshpalodfde/AHD-Pay/releases" target="_blank" rel="noopener" class="btn btn-lime" id="apk-btn">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
         Download APK
       </a>
 
-      <a href="setup.html" class="btn btn-setup">Setup Guide →</a>
-
-      <a href="https://offpay.vercel.app/" target="_blank" rel="noopener" class="btn btn-outline">Try PWA</a>
-
-      <a href="https://github.com/laksh-ya/offpayapp" target="_blank" rel="noopener" class="btn btn-git">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; color: #ffb300;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
-        Star on GitHub
-      </a>
     </div>
   </div>
 </section>
 
 <hr class="divider" />
-
 
 <!-- ─── Demo ─── -->
 <section id="demo">
@@ -702,44 +566,8 @@
     <h2>See it working.</h2>
     <p class="sub">A real payment on a real phone. Airplane mode on. No tricks.</p>
 
-    <div class="video-wrap" data-yt="iODYB15kApI">
-      <div class="video-facade">
-        <img src="https://img.youtube.com/vi/iODYB15kApI/maxresdefault.jpg" alt="" />
-        <div class="play-ring">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-      </div>
-    </div>
-
-    <div class="shots">
-      <figure class="shot">
-        <img src="assets/screenshots/pay-form.jpeg" alt="Pay screen" loading="lazy" />
-        <div class="shot-cap">Pay</div>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/pay-form-alt.jpeg" alt="PIN entry" loading="lazy" />
-        <div class="shot-cap">Enter PIN</div>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/payment-running.jpeg" alt="In progress" loading="lazy" />
-        <div class="shot-cap">In progress</div>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/payment-success.jpeg" alt="Success" loading="lazy" />
-        <div class="shot-cap">Done</div>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/qr-scanner.jpeg" alt="QR scanner" loading="lazy" />
-        <div class="shot-cap">Scan QR</div>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/history-list.jpeg" alt="History" loading="lazy" />
-        <div class="shot-cap">History</div>
-      </figure>
-      <figure class="shot">
-        <img src="assets/screenshots/balance-result.jpeg" alt="Balance" loading="lazy" />
-        <div class="shot-cap">Balance</div>
-      </figure>
+    <div class="demo-photo">
+      <img src="assets/screenshots/demo-scan-qr.png" alt="Scanning a merchant QR code with AHD" loading="lazy" />
     </div>
   </div>
 </section>
@@ -790,30 +618,15 @@
 
 <hr class="divider" />
 
-<!-- ─── PWA ─── -->
-<section id="pwa">
+<!-- ─── How it works ─── -->
+<section id="flow">
   <div class="w">
-    <span class="label">PWA</span>
-    <h2>iPhone? No sideload?<br/><span class="lime">Use the web app.</span></h2>
-    <p class="sub"><a href="https://offpay.vercel.app" target="_blank" rel="noopener" style="color:var(--lime)">offpay.vercel.app</a> offers the same interface and QR scanner, and works on Android and iOS. Hands the *99# step to your native dialer. Installable from your browser. Runs offline after first load.</p>
+    <span class="label">How it works</span>
+    <h2>The flow, step by step.</h2>
+    <p class="sub">Scan, fail over from data, and pay through *99# without ever leaving AHD.</p>
 
-    <div class="pwa-grid">
-      <div class="pwa-content">
-        <div class="install-steps">
-          <div class="install-step">
-            <span class="install-os">iOS</span>
-            <p>Safari → <strong>Share</strong> → <strong>Add to Home Screen</strong></p>
-          </div>
-          <div class="install-step">
-            <span class="install-os">Android</span>
-            <p>Chrome → menu → <strong>Install app</strong></p>
-          </div>
-        </div>
-        <a href="https://offpay.vercel.app/" target="_blank" rel="noopener" class="btn btn-lime">Open PWA →</a>
-      </div>
-      <div class="pwa-mockup">
-        <img src="assets/pwa-mockup.png" alt="AHD PWA" loading="lazy" />
-      </div>
+    <div class="demo-photo">
+      <img src="assets/screenshots/demo-flow.png" alt="AHD payment flow: scan QR, payment fails without internet, AHD detects no internet, pays over *99# instead, and confirms success" loading="lazy" />
     </div>
   </div>
 </section>
@@ -923,7 +736,7 @@
         <summary>Is AHD on the Play Store?
           <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq-ans">Not currently. Download the APK from <a href="https://github.com/laksh-ya/offpayapp/releases" target="_blank" rel="noopener">GitHub releases</a>, or use the <a href="https://offpay.vercel.app" target="_blank" rel="noopener">PWA</a> on any phone (including iOS) without sideloading.</div>
+        <div class="faq-ans">Not currently. Download the APK from <a href="https://github.com/harshpalodfde/AHD-Pay/releases" target="_blank" rel="noopener">GitHub releases</a>.</div>
       </details>
 
     </div>
@@ -941,20 +754,13 @@
       <h2>Download <span class="lime">AHD</span>.</h2>
       <p class="sub">Android APK, sideload, no Play Store. Or the PWA, which works on any phone with no install needed.</p>
       <div class="dl-btns">
-        <a href="https://github.com/laksh-ya/offpayapp/releases" target="_blank" rel="noopener" class="btn btn-lime" id="apk-btn-2">
+        <a href="https://github.com/harshpalodfde/AHD-Pay/releases" target="_blank" rel="noopener" class="btn btn-lime" id="apk-btn-2">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
           Download APK · Android 8+
         </a>
-        <a href="setup.html" class="btn btn-setup">Setup Guide</a>
-        <a href="https://offpay.vercel.app/" target="_blank" rel="noopener" class="btn btn-outline">Open PWA</a>
-        <a href="https://github.com/laksh-ya/offpayapp" target="_blank" rel="noopener" class="btn btn-git">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; color: #ffb300;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></svg>
-          Star on GitHub
-        </a>
       </div>
       <p class="dl-note">
-        <a href="setup.html">Setup guide</a> ·
-        <a href="https://github.com/Laksh-ya/OffPayApp" target="_blank" rel="noopener">Source on GitHub</a> ·
+        <a href="https://github.com/harshpalodfde/AHD-Pay" target="_blank" rel="noopener">Source on GitHub</a> ·
         MIT License
       </p>
     </div>
@@ -975,43 +781,20 @@
 <footer>
   <div class="foot-in">
     <a href="index.html" class="foot-brand">
-      <img src="assets/logos/icon.png" alt="" />
+      <img src="assets/logos/icon.svg" alt="" />
       <span><span class="lime">AHD</span></span>
     </a>
     <div class="foot-links">
-      <a href="setup.html">Setup</a>
       <a href="faq.html">FAQ</a>
       <a href="about.html">About</a>
       <a href="terms.html">Terms</a>
       <a href="privacy.html">Privacy</a>
-      <a href="https://github.com/Laksh-ya/OffPayApp" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://offpay.vercel.app/" target="_blank" rel="noopener">PWA</a>
+      <a href="https://github.com/harshpalodfde/AHD-Pay" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </footer>
 
 <script>
-  // Video facade → embed
-  document.querySelectorAll('.video-wrap[data-yt]').forEach(wrap => {
-    wrap.querySelector('.video-facade').addEventListener('click', () => {
-      const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube.com/embed/${wrap.dataset.yt}?autoplay=1&rel=0`;
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-      iframe.allowFullscreen = true;
-      wrap.appendChild(iframe);
-      wrap.querySelector('.video-facade').classList.add('gone');
-    }, { once: true });
-  });
-
-  // APK download → setup modal
-  ['apk-btn','apk-btn-2'].forEach(id => {
-    document.getElementById(id)?.addEventListener('click', () =>
-      setTimeout(() => document.getElementById('modal').classList.add('on'), 600)
-    );
-  });
-  document.getElementById('modal-skip').addEventListener('click', () => document.getElementById('modal').classList.remove('on'));
-  document.getElementById('modal').addEventListener('click', function(e) { if (e.target === this) this.classList.remove('on'); });
-
   // Mobile menu toggle logic
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');

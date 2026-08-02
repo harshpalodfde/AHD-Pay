@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="artifacts/icon.png" alt="AHD" width="120" height="120" />
-
 # AHD
 
 ### UPI payments. Without the internet.
@@ -9,28 +7,7 @@
 Send money. Check your balance. Scan QR codes.<br/>
 All over plain `*99#` USSD on your SIM. No data, no Wi-Fi, no account.
 
-[![Platform](https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white)](https://www.android.com/)
-[![Min SDK](https://img.shields.io/badge/min%20SDK-26-blue)]()
-[![Kotlin](https://img.shields.io/badge/Kotlin-100%25-7F52FF?logo=kotlin&logoColor=white)]()
-[![License](https://img.shields.io/badge/license-MIT-success)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
-
-**[Website](https://offpayapp.vercel.app/)** · **[PWA](https://offpay.vercel.app/)** · **[Download APK](https://github.com/laksh-ya/offpayapp/releases)**
-
-<br/>
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="docs/screenshots/pay-form.jpeg" alt="Pay screen" width="240" /><br/>
-      <sub><b>Type. Tap. Done.</b></sub>
-    </td>
-    <td align="center">
-      <img src="docs/screenshots/payment-success-alt.jpeg" alt="Payment complete" width="240" /><br/>
-      <sub><b>Real bank confirmation. Fully offline.</b></sub>
-    </td>
-  </tr>
-</table>
+**[Download APK](https://github.com/harshpalodfde/AHD-Pay/releases)**
 
 </div>
 
@@ -59,24 +36,6 @@ Every other UPI app needs the internet. In huge parts of India, that's a luxury.
 
 ---
 
-## How it looks
-
-<div align="center">
-
-| Pay | Success | Failed |
-|:--:|:--:|:--:|
-| <img src="docs/screenshots/pay-form.jpeg" width="220" /> | <img src="docs/screenshots/payment-success.jpeg" width="220" /> | <img src="docs/screenshots/payment-failed.jpeg" width="220" /> |
-| Inline PIN, auto-fires on 6th digit | Animated check, real ref id | Carrier's exact error, never silent |
-
-| Balance | History |
-|:--:|:--:|
-| <img src="docs/screenshots/balance-result.jpeg" width="220" /> | <img src="docs/screenshots/history-detail.jpeg" width="220" /> |
-| Live from the bank, cached for later | Carrier reply + ref id + "Pay again" |
-
-</div>
-
----
-
 ## Two modes, one toggle
 
 <table>
@@ -101,10 +60,6 @@ AHD copies the UPI ID, opens the system dialer with `*99*1*3#` prefilled. You dr
 </td>
 </tr>
 </table>
-
-<p align="center">
-  <img src="docs/screenshots/settings.jpeg" alt="Settings: mode and permissions" width="240" />
-</p>
 
 ---
 
@@ -164,17 +119,11 @@ Because AHD is sideloaded (not downloaded directly from Google Play Store), Andr
 
 *Note: If you do not want to grant Accessibility or Overlay permissions, you can skip them and run AHD in **Manual mode**. The app will simply copy the recipient's VPA and dial the code for you, letting you respond to the carrier prompts manually.*
 
-### Alternative: Web PWA (iOS & Tablets)
-If you are on an iPhone, tablet, or do not wish to install an APK:
-1. Open **[offpay.vercel.app](https://offpay.vercel.app/)** in your browser.
-2. Tap the browser's "Share" or "Menu" icon and select **Add to Home Screen**.
-3. Use the app to generate payment flows; it will copy details and open the system dialer with `*99*1*3#` prefilled for a Manual-mode session.
-
 ---
 
 ## Design
 
-AHD's look is inspired by [CRED's NeoPOP design language](https://cred.club/neopop): sharp surfaces, lime-on-black, geometric depth. Every animation is custom-built to feel native to that vocabulary, not a stock Lottie.
+AHD's look is inspired by [CRED's NeoPOP design language](https://cred.club/neopop): sharp surfaces, electric-blue-on-black, geometric depth. Every animation is custom-built to feel native to that vocabulary, not a stock Lottie.
 
 ---
 

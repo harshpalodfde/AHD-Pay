@@ -7,4 +7,4 @@
     android:canRetrieveWindowContent="true"
     android:accessibilityFlags="flagDefault|flagReportViewIds|flagRetrieveInteractiveWindows"
     android:packageNames="com.android.phone,com.android.server.telecom,com.samsung.android.app.telephonyui,com.google.android.dialer,com.android.dialer"
-    android:settingsActivity="com.offpay.app.presentation.MainActivity" />
+    android:settingsActivity="com.ahd.app.presentation.MainActivity" />

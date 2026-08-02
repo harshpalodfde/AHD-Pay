@@ -17,11 +17,11 @@ val keystoreProps = Properties().apply {
 }
 
 android {
-    namespace = "com.offpay.app"
+    namespace = "com.ahd.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.offpay.app"
+        applicationId = "com.ahd.app"
         minSdk = 26
         targetSdk = 34
         versionCode = 2

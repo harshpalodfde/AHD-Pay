@@ -228,7 +228,7 @@ The runtime behaviour during a session is selected by `OperationMode`, persisted
 
 ## Web PWA
 
-A small companion PWA lives at **[offpay.vercel.app](https://offpay.vercel.app/)** for iOS users and anyone who can't install the APK. It implements the Manual-mode flow only — VPA + amount form, copy-to-clipboard, deep-link into the device dialer with `*99*1*3#` prefilled. The PWA is a separate codebase, not part of this Android repo.
+A small companion PWA (not yet deployed) implements the Manual-mode flow only — VPA + amount form, copy-to-clipboard, deep-link into the device dialer with `*99*1*3#` prefilled. The PWA is a separate codebase, not part of this Android repo. Source lives in `website/`.
 
 ---
 
@@ -325,8 +325,8 @@ Instrumented tests cover the encrypted database (`RoomSqlCipherIntegrationTest`)
 ### Setup
 
 ```bash
-git clone https://github.com/<your-org>/OffPayApp.git
-cd OffPayApp
+git clone https://github.com/harshpalodfde/AHD-Pay.git
+cd AHD-Pay
 ```
 
 Create a `local.properties` file at the repo root and point it at your Android SDK:
@@ -366,7 +366,7 @@ Open the repo root in Android Studio (Ladybug or newer). Sync Gradle and use the
 ## Project structure (full)
 
 ```
-OffPayApp/
+AHD-Pay/
 ├── app/
 │   ├── build.gradle.kts            ← module-level Gradle config
 │   ├── proguard-rules.pro
@@ -374,7 +374,7 @@ OffPayApp/
 │       ├── main/
 │       │   ├── AndroidManifest.xml
 │       │   ├── java/com/offpay/app/
-│       │   │   ├── OffPayApplication.kt
+│       │   │   ├── AHDApplication.kt
 │       │   │   ├── data/
 │       │   │   ├── domain/
 │       │   │   ├── platform/
@@ -403,7 +403,7 @@ OffPayApp/
 ### Why a single Gradle module?
 The codebase is small (~30 source files in `main`). A multi-module split would add Gradle overhead without any concrete benefit — the package boundaries already enforce the layer rules, and pure-domain tests run fast as plain JVM tests.
 
-### Why manual DI in `OffPayApplication`?
+### Why manual DI in `AHDApplication`?
 There is exactly one graph of singletons (database, repositories, engine, runner) and they are wired once at startup. Hilt or Koin would add a runtime dependency and configuration burden that pays off only at much larger scale.
 
 ### Why SQLCipher and not just file-system encryption?

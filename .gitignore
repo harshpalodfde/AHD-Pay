@@ -40,3 +40,5 @@ keystore.properties
 node_modules/
 .next/
 /References
+app/release/
+.claude/

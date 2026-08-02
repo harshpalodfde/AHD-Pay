@@ -1,8 +1,6 @@
 # AHD | Landing Page
 
-**Live:** [offpayapp.vercel.app](https://offpayapp.vercel.app/)
-
-Static, zero-dependency marketing site for AHD. No build step, no framework: just HTML/CSS/JS served as-is.
+Static, zero-dependency marketing site for AHD. No build step, no framework: just HTML/CSS/JS served as-is. Not yet deployed.
 
 ## Structure
 
@@ -32,16 +30,14 @@ python3 -m http.server 5500
 
 ## Deploy
 
-Already live on Vercel at [offpayapp.vercel.app](https://offpayapp.vercel.app/).
-
-To redeploy after changes:
+Not yet deployed. To deploy to Vercel:
 
 ```sh
 cd website
 npx vercel --prod
 ```
 
-Or just push to `main`: Vercel auto-deploys from the `website/` root directory.
+Or push to `main` with a Vercel project configured to auto-deploy from the `website/` root directory.
 
 ## Design
 
@@ -65,8 +61,6 @@ payment-success-alt.jpeg, payment-failed.jpeg, settings.jpeg, faq.jpeg
 
 ## Links
 
-- **App landing:** [offpayapp.vercel.app](https://offpayapp.vercel.app/)
-- **PWA:** [offpay.vercel.app](https://offpay.vercel.app/)
 - **Ankit**
 - **Harsh:** [github.com/harshtripathi272](https://github.com/harshtripathi272/)
 - **Dipam**
