@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <clipPath id="tile">
+      <rect x="0" y="0" width="100" height="100" rx="22" ry="22"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#tile)">
+    <rect x="0" y="0" width="100" height="100" fill="#000000"/>
+
+    <!-- NeoPOP hard-shadow offset behind the mark -->
+    <g transform="translate(4,4)">
+      <path d="M50 20 L74 68 L61 68 L57 58 L43 58 L39 68 L26 68 Z" fill="#8AAB2C"/>
+    </g>
+
+    <!-- "A" monogram, apex doubling as a signal peak -->
+    <path d="M50 16 L74 64 L61 64 L57 54 L43 54 L39 64 L26 64 Z" fill="#C5F542"/>
+
+    <!-- crossbar gap reads as the USSD/offline "no data" notch -->
+    <rect x="43" y="54" width="14" height="6" fill="#000000"/>
+  </g>
+</svg>
