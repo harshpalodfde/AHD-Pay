@@ -99,7 +99,7 @@ fun PayScreen(
     val mode by viewModel.operationMode.collectAsState()
     val snackbar by viewModel.snackbar.collectAsState()
 
-    // ── OffPay-wordmark easter egg ────────────────────────────────────
+    // ── AHD-wordmark easter egg ────────────────────────────────────
     // Five quick taps on the wordmark trigger a falling-money rain across
     // the screen. The counter resets if the user pauses for >1.4s.
     var wordmarkTaps by remember { mutableStateOf(0) }
@@ -571,7 +571,7 @@ private fun HistoryShortcut(onClick: () -> Unit) {
 }
 
 /**
- * "OffPay" wordmark — "Off" in lime, "Pay" in white. Used as the title on
+ * "AHD" wordmark — single-color lime/accent text. Used as the title on
  * the Pay screen header (and reusable from anywhere else that needs the
  * brand mark instead of a literal page title).
  *
@@ -609,14 +609,9 @@ fun OffPayWordmark(modifier: Modifier = Modifier, onClick: (() -> Unit)? = null)
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            text = "Off",
+            text = "AHD",
             style = NeoPopType.DisplayLarge,
             color = NeoPopColors.Accent
-        )
-        Text(
-            text = "Pay",
-            style = NeoPopType.DisplayLarge,
-            color = NeoPopColors.TextPrimary
         )
     }
 }
@@ -631,7 +626,7 @@ private fun PermissionGate(
     if (!permissions.phoneBundle) {
         StatusBanner(
             title = "Phone access needed",
-            message = "OffPay needs phone access to dial *99# for offline payments.",
+            message = "AHD needs phone access to dial *99# for offline payments.",
             actionLabel = "Fix",
             onAction = { launchers.requestPhoneBundle() }
         )
@@ -642,7 +637,7 @@ private fun PermissionGate(
         if (!permissions.accessibility) {
             StatusBanner(
                 title = "Accessibility off",
-                message = "Enable OffPay's accessibility service so we can drive the carrier dialog.",
+                message = "Enable AHD's accessibility service so we can drive the carrier dialog.",
                 actionLabel = "Fix",
                 onAction = { openAccessibilitySettings(context) }
             )

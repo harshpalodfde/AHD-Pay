@@ -146,7 +146,7 @@ fun MoneyRainOverlay(onDone: () -> Unit) {
 
 /**
  * Draws a single rectangular currency note with a denomination glyph (₹),
- * a watermark, a subtle inset border, and OFFPAY microtext ridges.
+ * a watermark, a subtle inset border, and AHD microtext ridges.
  *
  * [palette] selects between three accent variants so the rain doesn't
  * look monotone:
@@ -228,7 +228,7 @@ private fun androidx.compose.ui.graphics.drawscope.DrawScope.drawCurrencyNote(
         color = accent.copy(alpha = alpha)
     )
 
-    // OFFPAY microtext line at the bottom — decorative ridges of varying
+    // AHD microtext line at the bottom — decorative ridges of varying
     // length to simulate microprint, not actual readable letters.
     val ridgeY = cy + h * 0.85f
     var offX = cx + w * 0.10f

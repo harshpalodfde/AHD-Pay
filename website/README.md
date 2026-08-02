@@ -1,8 +1,8 @@
-# OffPay | Landing Page
+# AHD | Landing Page
 
 **Live:** [offpayapp.vercel.app](https://offpayapp.vercel.app/)
 
-Static, zero-dependency marketing site for OffPay. No build step, no framework: just HTML/CSS/JS served as-is.
+Static, zero-dependency marketing site for AHD. No build step, no framework: just HTML/CSS/JS served as-is.
 
 ## Structure
 
@@ -67,5 +67,6 @@ payment-success-alt.jpeg, payment-failed.jpeg, settings.jpeg, faq.jpeg
 
 - **App landing:** [offpayapp.vercel.app](https://offpayapp.vercel.app/)
 - **PWA:** [offpay.vercel.app](https://offpay.vercel.app/)
-- **Lakshya:** [github.com/laksh-ya](https://github.com/laksh-ya/)
+- **Ankit**
 - **Harsh:** [github.com/harshtripathi272](https://github.com/harshtripathi272/)
+- **Dipam**

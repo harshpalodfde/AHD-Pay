@@ -4,7 +4,7 @@ package com.offpay.app.domain
  * The three operation modes controlling how a USSD session is presented.
  *
  * - [AUTO] (default): Full takeover — branded overlay covers the carrier
- *   dialog so the user only ever sees OffPay's UI during the session.
+ *   dialog so the user only ever sees AHD's UI during the session.
  * - [ADVANCED]: Auto-fills the carrier dialog while keeping it visible,
  *   with a small floating progress chip pinned under the status bar.
  *   The user watches the carrier dialog work in real time.

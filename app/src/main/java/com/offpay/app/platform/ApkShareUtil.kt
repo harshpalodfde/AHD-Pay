@@ -7,7 +7,7 @@ import androidx.core.content.FileProvider
 import java.io.File
 
 /**
- * Helper for sharing OffPay's own APK via the system share sheet. The
+ * Helper for sharing AHD's own APK via the system share sheet. The
  * approach mirrors what apps like ShareX/Bridgefy do — copy the installed
  * APK from the package's source path into the app's cache, expose it
  * through our FileProvider, and fire ACTION_SEND with `application/vnd.android.package-archive`.
@@ -19,9 +19,9 @@ import java.io.File
 object ApkShareUtil {
 
     private const val INSTALL_LINK = "https://offpay.vercel.app/"
-    private const val SHARE_BODY = "Try OffPay — UPI payments without internet. " +
+    private const val SHARE_BODY = "Try AHD — UPI payments without internet. " +
         "I'm sending you the APK; web fallback: $INSTALL_LINK"
-    private const val FALLBACK_BODY = "Try OffPay — UPI payments without internet. " +
+    private const val FALLBACK_BODY = "Try AHD — UPI payments without internet. " +
         "Install via the web/PWA at $INSTALL_LINK"
 
     /**
@@ -36,7 +36,7 @@ object ApkShareUtil {
             return
         }
 
-        val cacheCopy = File(context.cacheDir, "OffPay.apk")
+        val cacheCopy = File(context.cacheDir, "AHD.apk")
         runCatching {
             sourceApk.copyTo(cacheCopy, overwrite = true)
         }.onFailure {
@@ -56,13 +56,13 @@ object ApkShareUtil {
             type = "application/vnd.android.package-archive"
             putExtra(Intent.EXTRA_STREAM, uri)
             putExtra(Intent.EXTRA_TEXT, SHARE_BODY)
-            putExtra(Intent.EXTRA_SUBJECT, "OffPay")
+            putExtra(Intent.EXTRA_SUBJECT, "AHD")
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
 
         runCatching {
-            context.startActivity(Intent.createChooser(send, "Share OffPay"))
+            context.startActivity(Intent.createChooser(send, "Share AHD"))
         }.onFailure {
             shareLink(context)
         }
@@ -76,11 +76,11 @@ object ApkShareUtil {
         val send = Intent(Intent.ACTION_SEND).apply {
             type = "text/plain"
             putExtra(Intent.EXTRA_TEXT, FALLBACK_BODY)
-            putExtra(Intent.EXTRA_SUBJECT, "OffPay")
+            putExtra(Intent.EXTRA_SUBJECT, "AHD")
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         }
         runCatching {
-            context.startActivity(Intent.createChooser(send, "Share OffPay"))
+            context.startActivity(Intent.createChooser(send, "Share AHD"))
         }
     }
 

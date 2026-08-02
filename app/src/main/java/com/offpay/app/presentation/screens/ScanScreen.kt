@@ -359,7 +359,7 @@ private fun PermissionDeniedContent(
                 )
                 Spacer(Modifier.height(8.dp))
                 Text(
-                    text = "OffPay scans UPI QR codes to autofill payment details. " +
+                    text = "AHD scans UPI QR codes to autofill payment details. " +
                         "Grant camera access to continue.",
                     style = NeoPopType.BodyMedium,
                     color = NeoPopColors.TextSecondary

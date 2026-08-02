@@ -27,7 +27,7 @@
 # ─── Kotlin Reflect (used by R.drawable/R.raw reflection in easter eggs) ────────
 -keep class com.offpay.app.R$* { *; }
 
-# ─── OffPay Application class ───────────────────────────────────────────────────
+# ─── AHD Application class ──────────────────────────────────────────────────────
 -keep class com.offpay.app.OffPayApplication { *; }
 
 # ─── ML Kit Barcode ─────────────────────────────────────────────────────────────

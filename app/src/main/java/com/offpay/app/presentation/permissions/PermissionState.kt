@@ -112,7 +112,7 @@ fun openAccessibilitySettingsWithGuide(context: Context) {
     openAccessibilitySettings(context)
     android.widget.Toast.makeText(
         context,
-        "If toggle is greyed out, long-press OffPay icon → App info → ⋮ → Allow restricted settings.",
+        "If toggle is greyed out, long-press AHD icon → App info → ⋮ → Allow restricted settings.",
         android.widget.Toast.LENGTH_LONG
     ).show()
 }

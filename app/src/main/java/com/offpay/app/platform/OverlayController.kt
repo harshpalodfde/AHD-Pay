@@ -1,7 +1,7 @@
 package com.offpay.app.platform
 
 /**
- * Interface for managing OffPay's system-overlay windows (TYPE_APPLICATION_OVERLAY)
+ * Interface for managing AHD's system-overlay windows (TYPE_APPLICATION_OVERLAY)
  * during a USSD session.
  *
  * Two presentation modes:

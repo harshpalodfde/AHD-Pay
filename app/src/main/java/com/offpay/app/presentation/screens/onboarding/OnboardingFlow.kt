@@ -230,7 +230,7 @@ private fun WelcomePage() {
         }
         Spacer(Modifier.height(20.dp))
         Text(
-            text = "OffPay",
+            text = "AHD",
             style = NeoPopType.DisplayLarge.copy(fontSize = androidx.compose.ui.unit.TextUnit(64f, androidx.compose.ui.unit.TextUnitType.Sp)),
             color = NeoPopColors.TextPrimary
         )
@@ -377,7 +377,7 @@ private fun Star99BankingSetupPage() {
         NeoPopCard(modifier = Modifier.fillMaxWidth()) {
             Column {
                 Text(
-                    text = "This needs to be done once. After this, OffPay handles everything.",
+                    text = "This needs to be done once. After this, AHD handles everything.",
                     style = NeoPopType.BodyMedium,
                     color = NeoPopColors.TextSecondary
                 )
@@ -619,7 +619,7 @@ private fun PermissionsPage(permissions: PermissionStatus) {
             icon = Icons.Default.Phone,
             title = "Phone",
             short = "Dial *99# and read the carrier name.",
-            why = "OffPay dials *99# through Android's call API to start each USSD session, and reads the active SIM's carrier name to warn you if you're on Jio (where *99# is unreliable).",
+            why = "AHD dials *99# through Android's call API to start each USSD session, and reads the active SIM's carrier name to warn you if you're on Jio (where *99# is unreliable).",
             granted = permissions.phoneBundle,
             onGrant = { launchers.requestPhoneBundle() }
         ),
@@ -637,7 +637,7 @@ private fun PermissionsPage(permissions: PermissionStatus) {
             icon = Icons.Default.Settings,
             title = "Accessibility",
             short = "Read and reply to the carrier's USSD dialog.",
-            why = "Android's only public USSD API can't navigate multi-step menus. The accessibility service is what lets OffPay automatically type your amount, VPA and PIN into the carrier's dialog so you don't have to.",
+            why = "Android's only public USSD API can't navigate multi-step menus. The accessibility service is what lets AHD automatically type your amount, VPA and PIN into the carrier's dialog so you don't have to.",
             granted = permissions.accessibility,
             onGrant = { openAccessibilitySettings(context) },
             // Android 13+ may grey out the toggle. The FAQ has the workaround
@@ -648,8 +648,8 @@ private fun PermissionsPage(permissions: PermissionStatus) {
             key = "overlay",
             icon = Icons.Default.Layers,
             title = "Display Over Other Apps",
-            short = "Cover the system dialog with OffPay's overlay.",
-            why = "In Auto mode, OffPay paints a branded overlay over the system USSD dialog so you only ever see OffPay's UI during a session. In Advanced mode, the overlay is a small chip pinned under the status bar.",
+            short = "Cover the system dialog with AHD's overlay.",
+            why = "In Auto mode, AHD paints a branded overlay over the system USSD dialog so you only ever see AHD's UI during a session. In Advanced mode, the overlay is a small chip pinned under the status bar.",
             granted = permissions.overlay,
             onGrant = { openOverlaySettings(context) }
         )
@@ -672,7 +672,7 @@ private fun PermissionsPage(permissions: PermissionStatus) {
         )
         Spacer(Modifier.height(8.dp))
         Text(
-            text = "OffPay needs four things.",
+            text = "AHD needs four things.",
             style = NeoPopType.DisplayMedium,
             color = NeoPopColors.TextPrimary
         )
@@ -891,7 +891,7 @@ private fun RestrictedSettingsFix() {
                 )
                 Spacer(Modifier.height(4.dp))
                 Text(
-                    text = "Since OffPay is sideloaded (not from Play Store), Android 13+ blocks restricted settings like Accessibility by default. This is the same reason you had to disable Play Protect — it's a mandatory Google security measure for sideloaded apps.",
+                    text = "Since AHD is sideloaded (not from Play Store), Android 13+ blocks restricted settings like Accessibility by default. This is the same reason you had to disable Play Protect — it's a mandatory Google security measure for sideloaded apps.",
                     style = NeoPopType.BodySmall,
                     color = NeoPopColors.TextMuted
                 )
@@ -904,13 +904,13 @@ private fun RestrictedSettingsFix() {
                     color = NeoPopColors.Accent
                 )
                 Spacer(Modifier.height(8.dp))
-                NumberedStep(1, "Go to your phone's Settings → Apps → OffPay")
+                NumberedStep(1, "Go to your phone's Settings → Apps → AHD")
                 Spacer(Modifier.height(6.dp))
                 NumberedStep(2, "Tap the ⋮ three dots in the top right corner")
                 Spacer(Modifier.height(6.dp))
                 NumberedStep(3, "Select \"Allow restricted settings\" and confirm with your PIN/fingerprint")
                 Spacer(Modifier.height(6.dp))
-                NumberedStep(4, "Now open OffPay and enable the Accessibility service — it will work cleanly")
+                NumberedStep(4, "Now open AHD and enable the Accessibility service — it will work cleanly")
 
                 Spacer(Modifier.height(14.dp))
 

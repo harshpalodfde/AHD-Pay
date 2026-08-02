@@ -59,14 +59,14 @@ fun PrivacyScreen(onClose: () -> Unit, modifier: Modifier = Modifier) {
     ) {
         LegalSection(
             heading = "The short version",
-            body = "OffPay does not collect, transmit, sell, share or back up any of your data to us or any third party. There is no OffPay account, no analytics, no advertising. Everything you do in OffPay stays on your device. After install, the app makes zero outbound network requests."
+            body = "AHD does not collect, transmit, sell, share or back up any of your data to us or any third party. There is no AHD account, no analytics, no advertising. Everything you do in AHD stays on your device. After install, the app makes zero outbound network requests."
         )
         LegalSection(
-            heading = "What OffPay handles",
-            body = "OffPay needs a few pieces of information to dial *99# on your behalf and answer the carrier's prompts. Your UPI ID, payment amount and optional note live in app memory during a session, and on success are saved to an encrypted on-device history. The carrier's reply text is shown to you and recorded for successful payments. Your active SIM's carrier name is read once on launch to detect Jio (which doesn't reliably support *99#). Your operation-mode preference and last balance are saved in a private on-device key-value store. Scanned or imported QR codes are decoded in memory only — they are never stored."
+            heading = "What AHD handles",
+            body = "AHD needs a few pieces of information to dial *99# on your behalf and answer the carrier's prompts. Your UPI ID, payment amount and optional note live in app memory during a session, and on success are saved to an encrypted on-device history. The carrier's reply text is shown to you and recorded for successful payments. Your active SIM's carrier name is read once on launch to detect Jio (which doesn't reliably support *99#). Your operation-mode preference and last balance are saved in a private on-device key-value store. Scanned or imported QR codes are decoded in memory only — they are never stored."
         )
         LegalSection(
-            heading = "What OffPay does NOT collect",
+            heading = "What AHD does NOT collect",
             body = "We do not read your name, email, phone number, contacts, location, IMEI, IMSI, advertising ID, or device ID. We do not have access to your bank account. The accessibility service is restricted by configuration to the system USSD dialog packages and ignores every other app and screen on your device."
         )
         LegalSection(
@@ -75,27 +75,27 @@ fun PrivacyScreen(onClose: () -> Unit, modifier: Modifier = Modifier) {
         )
         LegalSection(
             heading = "Encrypted history",
-            body = "Successful payments are saved to a local SQLite database encrypted with SQLCipher. The raw file on disk is unreadable without the app's key. The database is capped at 200 most-recent records and you can clear it any time from the History screen. Uninstalling OffPay deletes everything."
+            body = "Successful payments are saved to a local SQLite database encrypted with SQLCipher. The raw file on disk is unreadable without the app's key. The database is capped at 200 most-recent records and you can clear it any time from the History screen. Uninstalling AHD deletes everything."
         )
         LegalSection(
             heading = "Clipboard Privacy",
-            body = "OffPay accesses your system clipboard strictly to copy the recipient's VPA / UPI ID (in Manual Mode) or read imported QR code texts. Clipboard content is processed transiently in volatile memory on-device and is never written to disk, stored, or transmitted to any server."
+            body = "AHD accesses your system clipboard strictly to copy the recipient's VPA / UPI ID (in Manual Mode) or read imported QR code texts. Clipboard content is processed transiently in volatile memory on-device and is never written to disk, stored, or transmitted to any server."
         )
         LegalSection(
             heading = "Screen Capture and Recording Privacy",
-            body = "OffPay operates completely offline and lacks permission to query other running apps or monitor your operating system for active background screen recorders, casting services (e.g. Chromecast, Miracast), or remote control tools. To protect your financial data, ensure your screen is not being shared, cast, or recorded by other apps when entering your UPI PIN."
+            body = "AHD operates completely offline and lacks permission to query other running apps or monitor your operating system for active background screen recorders, casting services (e.g. Chromecast, Miracast), or remote control tools. To protect your financial data, ensure your screen is not being shared, cast, or recorded by other apps when entering your UPI PIN."
         )
         LegalSection(
             heading = "Permissions",
-            body = "Phone (CALL_PHONE): only ever used to dial *99# codes, never regular numbers. Camera: live QR scanning, processed on-device by ML Kit, frames are not stored or uploaded. Phone state (READ_PHONE_STATE): reads the carrier name to apply the Jio fail-fast rule. Accessibility service: reads the carrier USSD dialog and types replies for you, restricted to known carrier dialog packages. Display over other apps (SYSTEM_ALERT_WINDOW): paints the OffPay UI over the carrier dialog in Auto mode. Denying any optional permission still leaves Manual mode fully usable."
+            body = "Phone (CALL_PHONE): only ever used to dial *99# codes, never regular numbers. Camera: live QR scanning, processed on-device by ML Kit, frames are not stored or uploaded. Phone state (READ_PHONE_STATE): reads the carrier name to apply the Jio fail-fast rule. Accessibility service: reads the carrier USSD dialog and types replies for you, restricted to known carrier dialog packages. Display over other apps (SYSTEM_ALERT_WINDOW): paints the AHD UI over the carrier dialog in Auto mode. Denying any optional permission still leaves Manual mode fully usable."
         )
         LegalSection(
             heading = "Children",
-            body = "OffPay is intended for users old enough to operate a personal UPI account. We do not knowingly direct OffPay at children, and we do not collect any data that would let us identify a child or anyone else."
+            body = "AHD is intended for users old enough to operate a personal UPI account. We do not knowingly direct AHD at children, and we do not collect any data that would let us identify a child or anyone else."
         )
         LegalSection(
             heading = "Changes",
-            body = "If we ever change how OffPay handles data, this screen will be updated, the effective date will be bumped and the change will be highlighted in the corresponding release notes. The repository's git history is the canonical record of every revision."
+            body = "If we ever change how AHD handles data, this screen will be updated, the effective date will be bumped and the change will be highlighted in the corresponding release notes. The repository's git history is the canonical record of every revision."
         )
         LegalSection(
             heading = "Contact",
@@ -122,16 +122,16 @@ fun TermsScreen(onClose: () -> Unit, modifier: Modifier = Modifier) {
         modifier = modifier
     ) {
         LegalSection(
-            heading = "About OffPay",
-            body = "OffPay is a side project published by Lakshya and Harsh. It is a free, unofficial Android client that automates India's *99# USSD service so you can use UPI without an internet connection. OffPay is NOT a registered payment service and is NOT affiliated with NPCI, your bank, your telecom carrier, or any payment service provider. Every transaction is processed by your bank and your carrier through the same *99# infrastructure that powers BHIM and other licensed apps OffPay only automates the on-screen interaction."
+            heading = "About AHD",
+            body = "AHD is a side project published by Ankit, Harsh and Dipam. It is a free, unofficial Android client that automates India's *99# USSD service so you can use UPI without an internet connection. AHD is NOT a registered payment service and is NOT affiliated with NPCI, your bank, your telecom carrier, or any payment service provider. Every transaction is processed by your bank and your carrier through the same *99# infrastructure that powers BHIM and other licensed apps AHD only automates the on-screen interaction."
         )
         LegalSection(
             heading = "Eligibility",
-            body = "By using OffPay you confirm that you are old enough to operate a personal bank account in India (typically 18+), that you own and control the SIM in the device, that the UPI ID and PIN you enter are yours, and that you are using OffPay in compliance with applicable laws and your bank's terms."
+            body = "By using AHD you confirm that you are old enough to operate a personal bank account in India (typically 18+), that you own and control the SIM in the device, that the UPI ID and PIN you enter are yours, and that you are using AHD in compliance with applicable laws and your bank's terms."
         )
         LegalSection(
             heading = "What you can expect",
-            body = "OffPay is provided AS IS, on a best-effort basis. We try to make it work reliably across carriers, devices and Android versions, but we cannot guarantee that every payment will succeed every time. Carrier networks, bank PSPs and Android device makers can change behaviour without notice. If a payment fails for any reason, the carrier will surface the error and OffPay will pass it on to you verbatim but we have no ability to reverse, refund or compensate any transaction."
+            body = "AHD is provided AS IS, on a best-effort basis. We try to make it work reliably across carriers, devices and Android versions, but we cannot guarantee that every payment will succeed every time. Carrier networks, bank PSPs and Android device makers can change behaviour without notice. If a payment fails for any reason, the carrier will surface the error and AHD will pass it on to you verbatim but we have no ability to reverse, refund or compensate any transaction."
         )
         LegalSection(
             heading = "Your responsibilities",
@@ -139,35 +139,35 @@ fun TermsScreen(onClose: () -> Unit, modifier: Modifier = Modifier) {
         )
         LegalSection(
             heading = "Network Security and Carrier Risks",
-            body = "OffPay relies entirely on the cellular network's USSD (*99#) signaling channel to execute transactions. You acknowledge and agree that USSD communications are not encrypted end-to-end in the same manner as internet-based (TCP/IP) protocols. They are subject to carrier-level vulnerabilities, including but not limited to base station spoofing (IMSI catching), SIM swapping, and cellular traffic interception. You use the service at your own risk. OffPay is not liable for financial loss, identity theft, or unauthorized transactions resulting from carrier network security failures or device-level compromises."
+            body = "AHD relies entirely on the cellular network's USSD (*99#) signaling channel to execute transactions. You acknowledge and agree that USSD communications are not encrypted end-to-end in the same manner as internet-based (TCP/IP) protocols. They are subject to carrier-level vulnerabilities, including but not limited to base station spoofing (IMSI catching), SIM swapping, and cellular traffic interception. You use the service at your own risk. AHD is not liable for financial loss, identity theft, or unauthorized transactions resulting from carrier network security failures or device-level compromises."
         )
         LegalSection(
             heading = "Clipboard Integrity",
-            body = "To facilitate manual operations, OffPay may copy payment details (such as UPI IDs) to your device's system clipboard. If your device is infected with malware or malicious third-party applications, clipboard data may be read, intercepted, or altered (clipboard hijacking). You are solely responsible for ensuring your device is free from malicious software. Always verify the recipient's details (VPA and Name) as shown on the final carrier confirmation screen before entering your UPI PIN."
+            body = "To facilitate manual operations, AHD may copy payment details (such as UPI IDs) to your device's system clipboard. If your device is infected with malware or malicious third-party applications, clipboard data may be read, intercepted, or altered (clipboard hijacking). You are solely responsible for ensuring your device is free from malicious software. Always verify the recipient's details (VPA and Name) as shown on the final carrier confirmation screen before entering your UPI PIN."
         )
         LegalSection(
             heading = "Screen Recording and Casting Risks",
-            body = "Your UPI PIN is sensitive financial data. You must ensure that no screen recording, screen casting, mirroring, or remote-access applications (such as TeamViewer, AnyDesk, Discord, or Zoom) are actively capturing or transmitting your screen while using OffPay. Entering your UPI PIN during an active capture session could expose your credentials to third parties. OffPay disclaims all liability for credentials compromised due to visual or capture-based recording."
+            body = "Your UPI PIN is sensitive financial data. You must ensure that no screen recording, screen casting, mirroring, or remote-access applications (such as TeamViewer, AnyDesk, Discord, or Zoom) are actively capturing or transmitting your screen while using AHD. Entering your UPI PIN during an active capture session could expose your credentials to third parties. AHD disclaims all liability for credentials compromised due to visual or capture-based recording."
         )
         LegalSection(
             heading = "Android OS Customizations and Accessibility Limitations",
-            body = "OffPay's automated mode uses Android's Accessibility Service to read and respond to standard system USSD dialogs. However, custom Android distributions and vendor-specific skins (including but not limited to Xiaomi's HyperOS/MIUI, OPPO/Realme's ColorOS, and vivo's Funtouch OS) frequently alter the rendering, layout, and structure of these dialogs. These customizations may cause the automation logic to fail, time out, or input data incorrectly. Users are advised to double-check all inputs before final authorization or switch to Manual Mode if dialog behavior is inconsistent."
+            body = "AHD's automated mode uses Android's Accessibility Service to read and respond to standard system USSD dialogs. However, custom Android distributions and vendor-specific skins (including but not limited to Xiaomi's HyperOS/MIUI, OPPO/Realme's ColorOS, and vivo's Funtouch OS) frequently alter the rendering, layout, and structure of these dialogs. These customizations may cause the automation logic to fail, time out, or input data incorrectly. Users are advised to double-check all inputs before final authorization or switch to Manual Mode if dialog behavior is inconsistent."
         )
         LegalSection(
             heading = "Carrier and bank charges",
-            body = "Your telecom carrier may charge a small per-session fee for *99# usage as defined by TRAI tariffs (typically up to ₹0.50 per session). OffPay does not see, control or share in any such fee. Your bank's UPI transaction limits and rules apply unchanged."
+            body = "Your telecom carrier may charge a small per-session fee for *99# usage as defined by TRAI tariffs (typically up to ₹0.50 per session). AHD does not see, control or share in any such fee. Your bank's UPI transaction limits and rules apply unchanged."
         )
         LegalSection(
             heading = "Things you must not do",
-            body = "You must not use OffPay to send payments to anyone other than the intended recipient, to attempt fraud, money laundering, or any activity that violates Indian law or your bank's terms. You must not reverse-engineer, repackage or redistribute OffPay in modified form without complying with the project's open-source licence (MIT). You must not use the accessibility service for anything other than the intended USSD automation flow within the app itself."
+            body = "You must not use AHD to send payments to anyone other than the intended recipient, to attempt fraud, money laundering, or any activity that violates Indian law or your bank's terms. You must not reverse-engineer, repackage or redistribute AHD in modified form without complying with the project's open-source licence (MIT). You must not use the accessibility service for anything other than the intended USSD automation flow within the app itself."
         )
         LegalSection(
             heading = "Limitation of liability",
-            body = "To the maximum extent permitted by law, OffPay's authors are not liable for any direct, indirect, incidental or consequential loss arising from your use of the app — including lost funds, missed payments, carrier downtime, locked PINs, device-specific quirks, or third-party fees. Your sole remedy if you are unhappy with OffPay is to stop using it and uninstall it."
+            body = "To the maximum extent permitted by law, AHD's authors are not liable for any direct, indirect, incidental or consequential loss arising from your use of the app — including lost funds, missed payments, carrier downtime, locked PINs, device-specific quirks, or third-party fees. Your sole remedy if you are unhappy with AHD is to stop using it and uninstall it."
         )
         LegalSection(
             heading = "Open source and warranty",
-            body = "OffPay is open source under the MIT licence. The full source is published on GitHub. The MIT licence text governs your right to copy, modify and redistribute the code, and explicitly disclaims warranties on the software."
+            body = "AHD is open source under the MIT licence. The full source is published on GitHub. The MIT licence text governs your right to copy, modify and redistribute the code, and explicitly disclaims warranties on the software."
         )
         LegalSection(
             heading = "Changes to these terms",
@@ -175,7 +175,7 @@ fun TermsScreen(onClose: () -> Unit, modifier: Modifier = Modifier) {
         )
         LegalSection(
             heading = "Governing law",
-            body = "These terms are governed by the laws of India. Any disputes arising from the use of OffPay will be subject to the courts of competent jurisdiction in India."
+            body = "These terms are governed by the laws of India. Any disputes arising from the use of AHD will be subject to the courts of competent jurisdiction in India."
         )
         LegalSection(
             heading = "Contact",
@@ -249,7 +249,7 @@ fun LegalScreen(onClose: () -> Unit, modifier: Modifier = Modifier) {
             )
             Spacer(Modifier.height(8.dp))
             Text(
-                text = "Plain-language version. Read this in full — it covers what we do and don't do with your data, and what you're agreeing to when you use OffPay.",
+                text = "Plain-language version. Read this in full — it covers what we do and don't do with your data, and what you're agreeing to when you use AHD.",
                 style = NeoPopType.BodyMedium,
                 color = NeoPopColors.TextSecondary
             )
@@ -294,14 +294,14 @@ private fun LegalTab(
 private fun PrivacyContent() {
     LegalSection(
         heading = "The short version",
-        body = "OffPay does not collect, transmit, sell, share or back up any of your data to us or any third party. There is no OffPay account, no analytics, no advertising. Everything you do in OffPay stays on your device. After install, the app makes zero outbound network requests."
+        body = "AHD does not collect, transmit, sell, share or back up any of your data to us or any third party. There is no AHD account, no analytics, no advertising. Everything you do in AHD stays on your device. After install, the app makes zero outbound network requests."
     )
     LegalSection(
-        heading = "What OffPay handles",
-        body = "OffPay needs a few pieces of information to dial *99# on your behalf and answer the carrier's prompts. Your UPI ID, payment amount and optional note live in app memory during a session, and on success are saved to an encrypted on-device history. The carrier's reply text is shown to you and recorded for successful payments. Your active SIM's carrier name is read once on launch to detect Jio (which doesn't reliably support *99#). Your operation-mode preference and last balance are saved in a private on-device key-value store. Scanned or imported QR codes are decoded in memory only — they are never stored."
+        heading = "What AHD handles",
+        body = "AHD needs a few pieces of information to dial *99# on your behalf and answer the carrier's prompts. Your UPI ID, payment amount and optional note live in app memory during a session, and on success are saved to an encrypted on-device history. The carrier's reply text is shown to you and recorded for successful payments. Your active SIM's carrier name is read once on launch to detect Jio (which doesn't reliably support *99#). Your operation-mode preference and last balance are saved in a private on-device key-value store. Scanned or imported QR codes are decoded in memory only — they are never stored."
     )
     LegalSection(
-        heading = "What OffPay does NOT collect",
+        heading = "What AHD does NOT collect",
         body = "We do not read your name, email, phone number, contacts, location, IMEI, IMSI, advertising ID, or device ID. We do not have access to your bank account. The accessibility service is restricted by configuration to the system USSD dialog packages and ignores every other app and screen on your device."
     )
     LegalSection(
@@ -310,27 +310,27 @@ private fun PrivacyContent() {
     )
     LegalSection(
         heading = "Encrypted history",
-        body = "Successful payments are saved to a local SQLite database encrypted with SQLCipher. The raw file on disk is unreadable without the app's key. The database is capped at 200 most-recent records and you can clear it any time from the History screen. Uninstalling OffPay deletes everything."
+        body = "Successful payments are saved to a local SQLite database encrypted with SQLCipher. The raw file on disk is unreadable without the app's key. The database is capped at 200 most-recent records and you can clear it any time from the History screen. Uninstalling AHD deletes everything."
     )
     LegalSection(
         heading = "Clipboard Privacy",
-        body = "OffPay accesses your system clipboard strictly to copy the recipient's VPA / UPI ID (in Manual Mode) or read imported QR code texts. Clipboard content is processed transiently in volatile memory on-device and is never written to disk, stored, or transmitted to any server."
+        body = "AHD accesses your system clipboard strictly to copy the recipient's VPA / UPI ID (in Manual Mode) or read imported QR code texts. Clipboard content is processed transiently in volatile memory on-device and is never written to disk, stored, or transmitted to any server."
     )
     LegalSection(
         heading = "Screen Capture and Recording Privacy",
-        body = "OffPay operates completely offline and lacks permission to query other running apps or monitor your operating system for active background screen recorders, casting services (e.g. Chromecast, Miracast), or remote control tools. To protect your financial data, ensure your screen is not being shared, cast, or recorded by other apps when entering your UPI PIN."
+        body = "AHD operates completely offline and lacks permission to query other running apps or monitor your operating system for active background screen recorders, casting services (e.g. Chromecast, Miracast), or remote control tools. To protect your financial data, ensure your screen is not being shared, cast, or recorded by other apps when entering your UPI PIN."
     )
     LegalSection(
         heading = "Permissions",
-        body = "Phone (CALL_PHONE): only ever used to dial *99# codes, never regular numbers. Camera: live QR scanning, processed on-device by ML Kit, frames are not stored or uploaded. Phone state (READ_PHONE_STATE): reads the carrier name to apply the Jio fail-fast rule. Accessibility service: reads the carrier USSD dialog and types replies for you, restricted to known carrier dialog packages. Display over other apps (SYSTEM_ALERT_WINDOW): paints the OffPay UI over the carrier dialog in Auto mode. Denying any optional permission still leaves Manual mode fully usable."
+        body = "Phone (CALL_PHONE): only ever used to dial *99# codes, never regular numbers. Camera: live QR scanning, processed on-device by ML Kit, frames are not stored or uploaded. Phone state (READ_PHONE_STATE): reads the carrier name to apply the Jio fail-fast rule. Accessibility service: reads the carrier USSD dialog and types replies for you, restricted to known carrier dialog packages. Display over other apps (SYSTEM_ALERT_WINDOW): paints the AHD UI over the carrier dialog in Auto mode. Denying any optional permission still leaves Manual mode fully usable."
     )
     LegalSection(
         heading = "Children",
-        body = "OffPay is intended for users old enough to operate a personal UPI account. We do not knowingly direct OffPay at children, and we do not collect any data that would let us identify a child or anyone else."
+        body = "AHD is intended for users old enough to operate a personal UPI account. We do not knowingly direct AHD at children, and we do not collect any data that would let us identify a child or anyone else."
     )
     LegalSection(
         heading = "Changes",
-        body = "If we ever change how OffPay handles data, this screen will be updated, the effective date will be bumped and the change will be highlighted in the corresponding release notes. The repository's git history is the canonical record of every revision."
+        body = "If we ever change how AHD handles data, this screen will be updated, the effective date will be bumped and the change will be highlighted in the corresponding release notes. The repository's git history is the canonical record of every revision."
     )
     LegalSection(
         heading = "Contact",
@@ -341,16 +341,16 @@ private fun PrivacyContent() {
 @Composable
 private fun TermsContent() {
     LegalSection(
-        heading = "About OffPay",
-        body = "OffPay is a side project published by Lakshya and Harsh. It is a free, unofficial Android client that automates India's *99# USSD service so you can use UPI without an internet connection. OffPay is NOT a registered payment service and is NOT affiliated with NPCI, your bank, your telecom carrier, or any payment service provider. Every transaction is processed by your bank and your carrier through the same *99# infrastructure that powers BHIM and other licensed apps OffPay only automates the on-screen interaction."
+        heading = "About AHD",
+        body = "AHD is a side project published by Ankit, Harsh and Dipam. It is a free, unofficial Android client that automates India's *99# USSD service so you can use UPI without an internet connection. AHD is NOT a registered payment service and is NOT affiliated with NPCI, your bank, your telecom carrier, or any payment service provider. Every transaction is processed by your bank and your carrier through the same *99# infrastructure that powers BHIM and other licensed apps AHD only automates the on-screen interaction."
     )
     LegalSection(
         heading = "Eligibility",
-        body = "By using OffPay you confirm that you are old enough to operate a personal bank account in India (typically 18+), that you own and control the SIM in the device, that the UPI ID and PIN you enter are yours, and that you are using OffPay in compliance with applicable laws and your bank's terms."
+        body = "By using AHD you confirm that you are old enough to operate a personal bank account in India (typically 18+), that you own and control the SIM in the device, that the UPI ID and PIN you enter are yours, and that you are using AHD in compliance with applicable laws and your bank's terms."
     )
     LegalSection(
         heading = "What you can expect",
-        body = "OffPay is provided AS IS, on a best-effort basis. We try to make it work reliably across carriers, devices and Android versions, but we cannot guarantee that every payment will succeed every time. Carrier networks, bank PSPs and Android device makers can change behaviour without notice. If a payment fails for any reason, the carrier will surface the error and OffPay will pass it on to you verbatim but we have no ability to reverse, refund or compensate any transaction."
+        body = "AHD is provided AS IS, on a best-effort basis. We try to make it work reliably across carriers, devices and Android versions, but we cannot guarantee that every payment will succeed every time. Carrier networks, bank PSPs and Android device makers can change behaviour without notice. If a payment fails for any reason, the carrier will surface the error and AHD will pass it on to you verbatim but we have no ability to reverse, refund or compensate any transaction."
     )
     LegalSection(
         heading = "Your responsibilities",
@@ -358,35 +358,35 @@ private fun TermsContent() {
     )
     LegalSection(
         heading = "Network Security and Carrier Risks",
-        body = "OffPay relies entirely on the cellular network's USSD (*99#) signaling channel to execute transactions. You acknowledge and agree that USSD communications are not encrypted end-to-end in the same manner as internet-based (TCP/IP) protocols. They are subject to carrier-level vulnerabilities, including but not limited to base station spoofing (IMSI catching), SIM swapping, and cellular traffic interception. You use the service at your own risk. OffPay is not liable for financial loss, identity theft, or unauthorized transactions resulting from carrier network security failures or device-level compromises."
+        body = "AHD relies entirely on the cellular network's USSD (*99#) signaling channel to execute transactions. You acknowledge and agree that USSD communications are not encrypted end-to-end in the same manner as internet-based (TCP/IP) protocols. They are subject to carrier-level vulnerabilities, including but not limited to base station spoofing (IMSI catching), SIM swapping, and cellular traffic interception. You use the service at your own risk. AHD is not liable for financial loss, identity theft, or unauthorized transactions resulting from carrier network security failures or device-level compromises."
     )
     LegalSection(
         heading = "Clipboard Integrity",
-        body = "To facilitate manual operations, OffPay may copy payment details (such as UPI IDs) to your device's system clipboard. If your device is infected with malware or malicious third-party applications, clipboard data may be read, intercepted, or altered (clipboard hijacking). You are solely responsible for ensuring your device is free from malicious software. Always verify the recipient's details (VPA and Name) as shown on the final carrier confirmation screen before entering your UPI PIN."
+        body = "To facilitate manual operations, AHD may copy payment details (such as UPI IDs) to your device's system clipboard. If your device is infected with malware or malicious third-party applications, clipboard data may be read, intercepted, or altered (clipboard hijacking). You are solely responsible for ensuring your device is free from malicious software. Always verify the recipient's details (VPA and Name) as shown on the final carrier confirmation screen before entering your UPI PIN."
     )
     LegalSection(
         heading = "Screen Recording and Casting Risks",
-        body = "Your UPI PIN is sensitive financial data. You must ensure that no screen recording, screen casting, mirroring, or remote-access applications (such as TeamViewer, AnyDesk, Discord, or Zoom) are actively capturing or transmitting your screen while using OffPay. Entering your UPI PIN during an active capture session could expose your credentials to third parties. OffPay disclaims all liability for credentials compromised due to visual or capture-based recording."
+        body = "Your UPI PIN is sensitive financial data. You must ensure that no screen recording, screen casting, mirroring, or remote-access applications (such as TeamViewer, AnyDesk, Discord, or Zoom) are actively capturing or transmitting your screen while using AHD. Entering your UPI PIN during an active capture session could expose your credentials to third parties. AHD disclaims all liability for credentials compromised due to visual or capture-based recording."
     )
     LegalSection(
         heading = "Android OS Customizations and Accessibility Limitations",
-        body = "OffPay's automated mode uses Android's Accessibility Service to read and respond to standard system USSD dialogs. However, custom Android distributions and vendor-specific skins (including but not limited to Xiaomi's HyperOS/MIUI, OPPO/Realme's ColorOS, and vivo's Funtouch OS) frequently alter the rendering, layout, and structure of these dialogs. These customizations may cause the automation logic to fail, time out, or input data incorrectly. Users are advised to double-check all inputs before final authorization or switch to Manual Mode if dialog behavior is inconsistent."
+        body = "AHD's automated mode uses Android's Accessibility Service to read and respond to standard system USSD dialogs. However, custom Android distributions and vendor-specific skins (including but not limited to Xiaomi's HyperOS/MIUI, OPPO/Realme's ColorOS, and vivo's Funtouch OS) frequently alter the rendering, layout, and structure of these dialogs. These customizations may cause the automation logic to fail, time out, or input data incorrectly. Users are advised to double-check all inputs before final authorization or switch to Manual Mode if dialog behavior is inconsistent."
     )
     LegalSection(
         heading = "Carrier and bank charges",
-        body = "Your telecom carrier may charge a small per-session fee for *99# usage as defined by TRAI tariffs (typically up to ₹0.50 per session). OffPay does not see, control or share in any such fee. Your bank's UPI transaction limits and rules apply unchanged."
+        body = "Your telecom carrier may charge a small per-session fee for *99# usage as defined by TRAI tariffs (typically up to ₹0.50 per session). AHD does not see, control or share in any such fee. Your bank's UPI transaction limits and rules apply unchanged."
     )
     LegalSection(
         heading = "Things you must not do",
-        body = "You must not use OffPay to send payments to anyone other than the intended recipient, to attempt fraud, money laundering, or any activity that violates Indian law or your bank's terms. You must not reverse-engineer, repackage or redistribute OffPay in modified form without complying with the project's open-source licence (MIT). You must not use the accessibility service for anything other than the intended USSD automation flow within the app itself."
+        body = "You must not use AHD to send payments to anyone other than the intended recipient, to attempt fraud, money laundering, or any activity that violates Indian law or your bank's terms. You must not reverse-engineer, repackage or redistribute AHD in modified form without complying with the project's open-source licence (MIT). You must not use the accessibility service for anything other than the intended USSD automation flow within the app itself."
     )
     LegalSection(
         heading = "Limitation of liability",
-        body = "To the maximum extent permitted by law, OffPay's authors are not liable for any direct, indirect, incidental or consequential loss arising from your use of the app — including lost funds, missed payments, carrier downtime, locked PINs, device-specific quirks, or third-party fees. Your sole remedy if you are unhappy with OffPay is to stop using it and uninstall it."
+        body = "To the maximum extent permitted by law, AHD's authors are not liable for any direct, indirect, incidental or consequential loss arising from your use of the app — including lost funds, missed payments, carrier downtime, locked PINs, device-specific quirks, or third-party fees. Your sole remedy if you are unhappy with AHD is to stop using it and uninstall it."
     )
     LegalSection(
         heading = "Open source and warranty",
-        body = "OffPay is open source under the MIT licence. The full source is published on GitHub. The MIT licence text governs your right to copy, modify and redistribute the code, and explicitly disclaims warranties on the software."
+        body = "AHD is open source under the MIT licence. The full source is published on GitHub. The MIT licence text governs your right to copy, modify and redistribute the code, and explicitly disclaims warranties on the software."
     )
     LegalSection(
         heading = "Changes to these terms",
@@ -394,7 +394,7 @@ private fun TermsContent() {
     )
     LegalSection(
         heading = "Governing law",
-        body = "These terms are governed by the laws of India. Any disputes arising from the use of OffPay will be subject to the courts of competent jurisdiction in India."
+        body = "These terms are governed by the laws of India. Any disputes arising from the use of AHD will be subject to the courts of competent jurisdiction in India."
     )
     LegalSection(
         heading = "Contact",
@@ -447,7 +447,7 @@ private fun LegalDocumentScaffold(
             )
             Spacer(Modifier.height(8.dp))
             Text(
-                text = "Plain-language version. Read this in full it covers what we do and don't do with your data, and what you're agreeing to when you use OffPay.",
+                text = "Plain-language version. Read this in full it covers what we do and don't do with your data, and what you're agreeing to when you use AHD.",
                 style = NeoPopType.BodyMedium,
                 color = NeoPopColors.TextSecondary
             )

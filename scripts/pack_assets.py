@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pack OffPay drawable assets from `artifacts/`.
+"""Pack AHD drawable assets from `artifacts/`.
 
 Sources expected (all optional; missing files are skipped with a note):
   artifacts/icon.png             → launcher icon family + offpay_logo.png

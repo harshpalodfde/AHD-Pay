@@ -41,7 +41,7 @@ import kotlin.random.Random
 /**
  * Silly-cat easter egg.
  *
- * Triggered from the Settings → About OffPay header tap. Pops the
+ * Triggered from the Settings → About AHD header tap. Pops the
  * `cat_meme.png` photo at a randomly chosen position somewhere on the
  * screen with a spring scale-in animation, holds for a few seconds, then
  * fades out. Tapping anywhere dismisses early.

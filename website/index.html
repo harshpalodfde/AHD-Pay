@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>OffPay — UPI without the internet</title>
+  <title>AHD — UPI without the internet</title>
 
-  <meta name="description" content="OffPay sends UPI payments over *99#: no internet, no account, no servers. Android app + PWA." />
+  <meta name="description" content="AHD sends UPI payments over *99#: no internet, no account, no servers. Android app + PWA." />
   <meta name="theme-color" content="#000000" />
-  <meta property="og:title" content="OffPay" />
+  <meta property="og:title" content="AHD" />
   <meta property="og:description" content="Send money over UPI. No internet. Just *99# and a phone signal." />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="assets/logos/icon.png" />
@@ -622,7 +622,7 @@
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
     </div>
     <h3>One quick setup step</h3>
-    <p>OffPay needs Accessibility Service to auto-dial *99#. Watch the guide (takes about 2 minutes).</p>
+    <p>AHD needs Accessibility Service to auto-dial *99#. Watch the guide (takes about 2 minutes).</p>
     <a href="setup.html" class="modal-cta">Watch Setup Guide →</a>
     <button class="modal-skip" id="modal-skip">Skip for now</button>
   </div>
@@ -631,8 +631,8 @@
 <!-- Nav -->
 <nav>
   <a href="index.html" class="nav-brand">
-    <img src="assets/logos/icon.png" alt="OffPay" />
-    <span><span class="lime">Off</span>Pay</span>
+    <img src="assets/logos/icon.png" alt="AHD" />
+    <span><span class="lime">AHD</span></span>
   </a>
   <div class="nav-links">
     <a href="#demo">Demo</a>
@@ -673,7 +673,7 @@
   <div class="hero-vignette" aria-hidden="true"></div>
   <div class="w">
     <h1>Pay over UPI.<br/><span class="lime">No internet.</span></h1>
-    <p class="sub">OffPay uses *99# (India's USSD-based UPI protocol) to send money, check balance, and scan QR codes entirely over your SIM's voice channel. Works on Airtel, Vi and BSNL with zero data.</p>
+    <p class="sub">AHD uses *99# (India's USSD-based UPI protocol) to send money, check balance, and scan QR codes entirely over your SIM's voice channel. Works on Airtel, Vi and BSNL with zero data.</p>
     <div class="hero-btns">
       <a href="https://github.com/laksh-ya/offpayapp/releases" target="_blank" rel="noopener" class="btn btn-lime" id="apk-btn">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
@@ -812,7 +812,7 @@
         <a href="https://offpay.vercel.app/" target="_blank" rel="noopener" class="btn btn-lime">Open PWA →</a>
       </div>
       <div class="pwa-mockup">
-        <img src="assets/pwa-mockup.png" alt="OffPay PWA" loading="lazy" />
+        <img src="assets/pwa-mockup.png" alt="AHD PWA" loading="lazy" />
       </div>
     </div>
   </div>
@@ -840,7 +840,7 @@
           <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
         <div class="faq-ans">
-          Airtel, Vodafone (Vi), and BSNL: yes. Jio: no. That's a Jio network-level constraint, not an OffPay limitation.
+          Airtel, Vodafone (Vi), and BSNL: yes. Jio: no. That's a Jio network-level constraint, not an AHD limitation.
           <div class="carrier-tags">
             <span class="carrier-tag tag-yes">AIRTEL ✓</span>
             <span class="carrier-tag tag-yes">VI ✓</span>
@@ -858,7 +858,7 @@
           <div class="modes-row">
             <div class="mode-card">
               <b>Auto</b>
-              <p>OffPay handles the carrier dialog automatically using Accessibility Service, keeping you in OffPay throughout the payment.</p>
+              <p>AHD handles the carrier dialog automatically using Accessibility Service, keeping you in AHD throughout the payment.</p>
             </div>
             <div class="mode-card">
               <b>Manual</b>
@@ -872,7 +872,7 @@
         <summary>Why does it need Accessibility Service?
           <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq-ans">Android's only public USSD API can't navigate multi-step menus. The Accessibility Service is what lets OffPay automatically type your amount, UPI ID, and PIN into the carrier's dialog so you don't have to. Without it, use Manual mode.</div>
+        <div class="faq-ans">Android's only public USSD API can't navigate multi-step menus. The Accessibility Service is what lets AHD automatically type your amount, UPI ID, and PIN into the carrier's dialog so you don't have to. Without it, use Manual mode.</div>
       </details>
 
       <details>
@@ -880,12 +880,12 @@
           <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
         <div class="faq-ans">
-          Since OffPay is sideloaded (not from Play Store), Android 13+ blocks restricted settings like Accessibility by default. Fix:
+          Since AHD is sideloaded (not from Play Store), Android 13+ blocks restricted settings like Accessibility by default. Fix:
           <div class="steps-list">
-            <div class="step-row"><div class="step-num">1</div><div class="step-body">Settings → Apps → OffPay</div></div>
+            <div class="step-row"><div class="step-num">1</div><div class="step-body">Settings → Apps → AHD</div></div>
             <div class="step-row"><div class="step-num">2</div><div class="step-body">Tap the ⋮ three-dot menu (top right)</div></div>
             <div class="step-row"><div class="step-num">3</div><div class="step-body"><strong>Allow restricted settings</strong> → confirm with your PIN or fingerprint</div></div>
-            <div class="step-row"><div class="step-num">4</div><div class="step-body">Return to OffPay → enable Accessibility. It works now.</div></div>
+            <div class="step-row"><div class="step-num">4</div><div class="step-body">Return to AHD → enable Accessibility. It works now.</div></div>
           </div>
         </div>
       </details>
@@ -895,7 +895,7 @@
           <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
         <div class="faq-ans">
-          This one-time setup links your bank account to the *99# channel. After this, OffPay handles everything.
+          This one-time setup links your bank account to the *99# channel. After this, AHD handles everything.
           <div class="steps-list">
             <div class="step-row"><div class="step-num">1</div><div class="step-body">Open your phone's dialer and call *99#</div></div>
             <div class="step-row"><div class="step-num">2</div><div class="step-body">Enter your bank name when prompted (SBI, HDFC, ICICI, etc.)</div></div>
@@ -909,18 +909,18 @@
         <summary>What if a payment fails?
           <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq-ans">OffPay shows the carrier's exact error message. Common causes: wrong PIN, bank not linked to *99#, daily limit exceeded, wrong UPI ID, or weak signal. Tap the failed transaction in history to see the full reply and retry in one tap. A 25-second timeout prevents stuck sessions.</div>
+        <div class="faq-ans">AHD shows the carrier's exact error message. Common causes: wrong PIN, bank not linked to *99#, daily limit exceeded, wrong UPI ID, or weak signal. Tap the failed transaction in history to see the full reply and retry in one tap. A 25-second timeout prevents stuck sessions.</div>
       </details>
 
       <details>
         <summary>What are the transaction limits?
           <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
-        <div class="faq-ans">₹5,000 per transaction and ₹10,000 per day. These are NPCI network-level limits for *99#, not set by OffPay.</div>
+        <div class="faq-ans">₹5,000 per transaction and ₹10,000 per day. These are NPCI network-level limits for *99#, not set by AHD.</div>
       </details>
 
       <details>
-        <summary>Is OffPay on the Play Store?
+        <summary>Is AHD on the Play Store?
           <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
         </summary>
         <div class="faq-ans">Not currently. Download the APK from <a href="https://github.com/laksh-ya/offpayapp/releases" target="_blank" rel="noopener">GitHub releases</a>, or use the <a href="https://offpay.vercel.app" target="_blank" rel="noopener">PWA</a> on any phone (including iOS) without sideloading.</div>
@@ -938,7 +938,7 @@
   <div class="w">
     <div class="dl-box">
       <span class="label">Get it</span>
-      <h2>Download <span class="lime">OffPay</span>.</h2>
+      <h2>Download <span class="lime">AHD</span>.</h2>
       <p class="sub">Android APK, sideload, no Play Store. Or the PWA, which works on any phone with no install needed.</p>
       <div class="dl-btns">
         <a href="https://github.com/laksh-ya/offpayapp/releases" target="_blank" rel="noopener" class="btn btn-lime" id="apk-btn-2">
@@ -965,7 +965,7 @@
 <div class="cat" aria-hidden="true">
   <img class="cat-img" src="assets/cat_aesthetic.png" alt="" loading="lazy" />
   <div class="cat-copy">
-    <div class="cat-by">Made by Lakshya &amp; Harsh</div>
+    <div class="cat-by">Made by Ankit, Harsh &amp; Dipam</div>
     <div class="cat-line">now go pay<br/>without the <span class="lime">internet.</span></div>
   </div>
 </div>
@@ -976,7 +976,7 @@
   <div class="foot-in">
     <a href="index.html" class="foot-brand">
       <img src="assets/logos/icon.png" alt="" />
-      <span><span class="lime">Off</span>Pay</span>
+      <span><span class="lime">AHD</span></span>
     </a>
     <div class="foot-links">
       <a href="setup.html">Setup</a>

@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "OffPay"
+rootProject.name = "AHD"
 include(":app")

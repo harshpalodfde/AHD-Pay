@@ -1,6 +1,6 @@
-# Contributing to OffPay
+# Contributing to AHD
 
-Thank you for considering a contribution. OffPay is a small project with big ambitions (making offline UPI payments feel as smooth as online ones) and outside help on UX polish, device-quirk fixes, language coverage, and testing is genuinely valued.
+Thank you for considering a contribution. AHD is a small project with big ambitions (making offline UPI payments feel as smooth as online ones) and outside help on UX polish, device-quirk fixes, language coverage, and testing is genuinely valued.
 
 This guide explains how to file an issue, set up the project, and get a pull request merged.
 
@@ -19,7 +19,7 @@ If something feels off, please email the maintainers privately rather than escal
 You don't have to write code to help. All of these are equally welcome:
 
 - **Bug reports** with a clear repro, your device + carrier, and what you expected vs what happened.
-- **Compatibility reports.** Did OffPay work for you on a particular bank, carrier, or device? Did it not? Tell us.
+- **Compatibility reports.** Did AHD work for you on a particular bank, carrier, or device? Did it not? Tell us.
 - **UX feedback.** Screenshots and a short note are perfect.
 - **Translations** of the UI strings into Hindi, Tamil, Telugu, Bengali, Marathi, or any Indian language.
 - **Documentation fixes.** Typos, broken links, unclear sections in any of the markdown files.
@@ -32,7 +32,7 @@ You don't have to write code to help. All of these are equally welcome:
 Before opening a new issue, please:
 
 1. Search [existing issues](../../issues) to make sure it isn't already filed.
-2. If it's a payment that went wrong, **double-check whether the bank actually debited you** (the `*99#` service does not debit on a failed session, but the in-app result might still confuse you). A screenshot of the carrier's exact reply (visible in OffPay's failure card) helps a lot.
+2. If it's a payment that went wrong, **double-check whether the bank actually debited you** (the `*99#` service does not debit on a failed session, but the in-app result might still confuse you). A screenshot of the carrier's exact reply (visible in AHD's failure card) helps a lot.
 3. Open a new issue using the bug report template if available.
 
 A good bug report includes:
@@ -40,10 +40,10 @@ A good bug report includes:
 - A short, descriptive title.
 - Device model, Android version, OS skin (Stock, OneUI, MIUI, ColorOS, …).
 - Carrier (Airtel / Vi / BSNL / …) and the bank you tried to pay from.
-- The OffPay version (visible at the bottom of Settings).
+- The AHD version (visible at the bottom of Settings).
 - The Operation Mode you were in (Auto / Advanced / Manual).
 - Steps to reproduce, what you expected, and what actually happened.
-- The carrier's verbatim reply if OffPay surfaced one.
+- The carrier's verbatim reply if AHD surfaced one.
 - A short screen recording if the bug is visual or animation-related.
 
 Please **redact the UPI ID, PIN, and any reference numbers** before posting.
@@ -58,7 +58,7 @@ Open a discussion or an issue tagged `enhancement`. Describe:
 - A rough idea of how the user would experience it.
 - Any UX edge cases you've already thought about.
 
-OffPay is opinionated about scope: it is an offline UPI client, not a general SMS/USSD framework, not a finance dashboard, not an account aggregator. Features that drift from that scope are likely to be politely declined.
+AHD is opinionated about scope: it is an offline UPI client, not a general SMS/USSD framework, not a finance dashboard, not an account aggregator. Features that drift from that scope are likely to be politely declined.
 
 ---
 
@@ -190,4 +190,4 @@ By submitting a pull request you agree that your contribution is licensed under 
 
 ---
 
-Thanks again: every issue, fix, and translation makes OffPay more useful to people who can't always rely on a data connection.
+Thanks again: every issue, fix, and translation makes AHD more useful to people who can't always rely on a data connection.

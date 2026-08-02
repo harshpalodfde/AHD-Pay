@@ -132,7 +132,7 @@ fun SettingsScreen(
         Spacer(Modifier.height(12.dp))
         ModeOption(
             label = "Auto",
-            description = "Default. OffPay handles the carrier dialog automatically — you stay in OffPay throughout.",
+            description = "Default. AHD handles the carrier dialog automatically — you stay in AHD throughout.",
             selected = mode != OperationMode.MANUAL,
             onClick = { scope.launch { prefsRepo.setOperationMode(OperationMode.AUTO) } }
         )
@@ -263,14 +263,14 @@ fun SettingsScreen(
         Spacer(Modifier.height(12.dp))
         ShortcutRow(
             icon = Icons.Default.Share,
-            title = "Share OffPay",
+            title = "Share AHD",
             subtitle = "Send the installed APK (or install link)",
             onClick = { com.offpay.app.platform.ApkShareUtil.shareInstalledApk(context) }
         )
         Spacer(Modifier.height(8.dp))
         ShortcutRow(
             icon = Icons.Default.Language,
-            title = "OffPay Web (PWA)",
+            title = "AHD Web (PWA)",
             subtitle = "Manual mode in any browser — useful on iPhone",
             onClick = { openUrl(context, "https://offpay.vercel.app/") }
         )
@@ -294,7 +294,6 @@ fun SettingsScreen(
         // ── About ──
         AboutSection(
             versionName = versionName,
-            onOpenLakshya = { openUrl(context, "https://github.com/laksh-ya/") },
             onOpenHarsh = { openUrl(context, "https://github.com/harshtripathi272/") }
         )
 
@@ -314,19 +313,18 @@ private fun openUrl(context: android.content.Context, url: String) {
 }
 
 /**
- * About section — minimal credit "made by Lakshya & Harsh", an OffPay
+ * About section — minimal credit "made by Ankit, Harsh & Dipam", an AHD
  * logo + version line, and two hidden easter eggs:
- *   - Tap the **OffPay header row** (logo + name) once → summons the
- *     "big cat rises from the bottom" overlay. This is the about-OffPay
+ *   - Tap the **AHD header row** (logo + name) once → summons the
+ *     "big cat rises from the bottom" overlay. This is the about-AHD
  *     egg, separate from the wordmark money-rain on the Pay screen.
  *   - Tap the **credit line** once → opens an action sheet with the
- *     two GitHub profiles. No counter, no easter egg here — just a
+ *     credited profiles. No counter, no easter egg here — just a
  *     clean tap-to-link.
  */
 @Composable
 private fun AboutSection(
     versionName: String,
-    onOpenLakshya: () -> Unit,
     onOpenHarsh: () -> Unit
 ) {
     val view = LocalView.current
@@ -348,14 +346,14 @@ private fun AboutSection(
         ) {
             Image(
                 painter = painterResource(id = R.drawable.offpay_logo),
-                contentDescription = "OffPay",
+                contentDescription = "AHD",
                 contentScale = ContentScale.Fit,
                 modifier = Modifier.size(56.dp)
             )
             Spacer(Modifier.width(14.dp))
             Column(Modifier.weight(1f)) {
                 Text(
-                    text = "OffPay",
+                    text = "AHD",
                     style = NeoPopType.TitleLarge,
                     color = NeoPopColors.TextPrimary
                 )
@@ -385,7 +383,7 @@ private fun AboutSection(
                     color = NeoPopColors.TextSecondary
                 )
                 Text(
-                    text = "Lakshya & Harsh",
+                    text = "Ankit, Harsh & Dipam",
                     style = NeoPopType.BodyMedium,
                     color = NeoPopColors.TextPrimary
                 )
@@ -397,10 +395,6 @@ private fun AboutSection(
     if (showCreditSheet) {
         CreditSheet(
             onDismiss = { showCreditSheet = false },
-            onOpenLakshya = {
-                showCreditSheet = false
-                onOpenLakshya()
-            },
             onOpenHarsh = {
                 showCreditSheet = false
                 onOpenHarsh()
@@ -473,7 +467,6 @@ private fun AboutSection(
 @Composable
 private fun CreditSheet(
     onDismiss: () -> Unit,
-    onOpenLakshya: () -> Unit,
     onOpenHarsh: () -> Unit
 ) {
     val sheetState = androidx.compose.material3.rememberModalBottomSheetState()
@@ -493,24 +486,38 @@ private fun CreditSheet(
                 color = NeoPopColors.Accent
             )
             Spacer(Modifier.height(12.dp))
-            CreditRow(name = "Lakshya", handle = "@laksh-ya", onClick = onOpenLakshya)
+            CreditRow(name = "Ankit")
             Spacer(Modifier.height(8.dp))
             CreditRow(name = "Harsh", handle = "@harshtripathi272", onClick = onOpenHarsh)
+            Spacer(Modifier.height(8.dp))
+            CreditRow(name = "Dipam")
             Spacer(Modifier.height(28.dp))
         }
     }
 }
 
+/**
+ * A single credit entry in the "made by" sheet. [handle]/[onClick] are
+ * optional — Ankit and Dipam don't have a linked GitHub profile yet, so
+ * their rows render as plain, non-clickable name-only entries (no handle
+ * text, no chevron) instead of faking a link.
+ */
 @Composable
-private fun CreditRow(name: String, handle: String, onClick: () -> Unit) {
+private fun CreditRow(name: String, handle: String? = null, onClick: (() -> Unit)? = null) {
     val view = LocalView.current
     Row(
         Modifier
             .fillMaxWidth()
-            .clickable {
-                view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
-                onClick()
-            }
+            .then(
+                if (onClick != null) {
+                    Modifier.clickable {
+                        view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY)
+                        onClick()
+                    }
+                } else {
+                    Modifier
+                }
+            )
             .padding(vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -530,13 +537,17 @@ private fun CreditRow(name: String, handle: String, onClick: () -> Unit) {
         Spacer(Modifier.width(14.dp))
         Column(Modifier.weight(1f)) {
             Text(name, style = NeoPopType.TitleMedium, color = NeoPopColors.TextPrimary)
-            Text(handle, style = NeoPopType.BodySmall, color = NeoPopColors.TextMuted)
+            if (handle != null) {
+                Text(handle, style = NeoPopType.BodySmall, color = NeoPopColors.TextMuted)
+            }
         }
-        Icon(
-            imageVector = Icons.Default.ChevronRight,
-            contentDescription = null,
-            tint = NeoPopColors.TextMuted
-        )
+        if (onClick != null) {
+            Icon(
+                imageVector = Icons.Default.ChevronRight,
+                contentDescription = null,
+                tint = NeoPopColors.TextMuted
+            )
+        }
     }
 }
 
@@ -712,7 +723,7 @@ private fun AccessibilityTroubleshootCard() {
             )
             Spacer(Modifier.height(8.dp))
             Text(
-                text = "Since OffPay is sideloaded (not from Play Store), Android 13+ blocks restricted settings by default. This is the same reason you had to disable Play Protect — it's a mandatory Google security measure.",
+                text = "Since AHD is sideloaded (not from Play Store), Android 13+ blocks restricted settings by default. This is the same reason you had to disable Play Protect — it's a mandatory Google security measure.",
                 style = NeoPopType.BodySmall,
                 color = NeoPopColors.TextSecondary
             )
@@ -723,13 +734,13 @@ private fun AccessibilityTroubleshootCard() {
                 color = NeoPopColors.Accent
             )
             Spacer(Modifier.height(8.dp))
-            SettingsStepRow(1, "Go to Settings → Apps → OffPay")
+            SettingsStepRow(1, "Go to Settings → Apps → AHD")
             Spacer(Modifier.height(6.dp))
             SettingsStepRow(2, "Tap the ⋮ three dots (top right)")
             Spacer(Modifier.height(6.dp))
             SettingsStepRow(3, "Select \"Allow restricted settings\" → confirm with PIN/fingerprint")
             Spacer(Modifier.height(6.dp))
-            SettingsStepRow(4, "Open OffPay → enable Accessibility service")
+            SettingsStepRow(4, "Open AHD → enable Accessibility service")
             Spacer(Modifier.height(14.dp))
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 NeoPopSecondaryButton(

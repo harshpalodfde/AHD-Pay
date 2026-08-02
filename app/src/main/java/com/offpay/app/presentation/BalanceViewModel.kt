@@ -153,7 +153,7 @@ class BalanceViewModel(
         when (mode) {
             OperationMode.AUTO -> overlayController?.show(
                 title = "Checking balance",
-                subtitle = "OffPay is asking your bank…",
+                subtitle = "AHD is asking your bank…",
                 stepLabel = "STARTING"
             )
             OperationMode.ADVANCED -> overlayController?.showMinimal(
@@ -190,7 +190,7 @@ class BalanceViewModel(
                             when (mode) {
                                 OperationMode.AUTO -> overlayController?.update(
                                     title = "Checking balance",
-                                    subtitle = "OffPay is asking your bank…",
+                                    subtitle = "AHD is asking your bank…",
                                     stepLabel = (event.label ?: "Processing").uppercase()
                                 )
                                 OperationMode.ADVANCED -> overlayController?.updateMinimal(

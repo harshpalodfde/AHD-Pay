@@ -81,7 +81,7 @@ void main() {
   // Soft lime glow under the pointer
   float glow = exp(-d * 1.4) * 0.35;
 
-  // OffPay Lime accent color (#c5f542)
+  // AHD Lime accent color (#c5f542)
   vec3 lime = vec3(0.772, 0.960, 0.258);
 
   // Combine background, grid pattern, and dot matrix

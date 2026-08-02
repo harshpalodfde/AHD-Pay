@@ -130,7 +130,7 @@ fun FaqScreen(
             // ── Hero blurb ──
             val heroText = buildAnnotatedString {
                 append("we know USSD is weird. here's how ")
-                withStyle(SpanStyle(color = NeoPopColors.Accent)) { append("OffPay") }
+                withStyle(SpanStyle(color = NeoPopColors.Accent)) { append("AHD") }
                 append(" makes it work.")
             }
             Text(
@@ -155,7 +155,7 @@ fun FaqScreen(
                 badge = "ONE-TIME"
             ) {
                 Text(
-                    text = "Before using OffPay, you need to enable your bank on the *99# USSD channel. This only needs to be done once.",
+                    text = "Before using AHD, you need to enable your bank on the *99# USSD channel. This only needs to be done once.",
                     style = NeoPopType.BodyMedium,
                     color = NeoPopColors.TextSecondary
                 )
@@ -217,7 +217,7 @@ fun FaqScreen(
             // 3. Supported carriers
             ExpandableQuestion(question = "Which carriers are supported?") {
                 Text(
-                    text = "Airtel, Vodafone (Vi), and BSNL — yes. Jio — no. That's a technical limitation on Jio's network, not OffPay.",
+                    text = "Airtel, Vodafone (Vi), and BSNL — yes. Jio — no. That's a technical limitation on Jio's network, not AHD.",
                     style = NeoPopType.BodyMedium,
                     color = NeoPopColors.TextSecondary
                 )
@@ -234,9 +234,9 @@ fun FaqScreen(
             ExpandableQuestion(question = "How do I enable the accessibility service?") {
                 NumberedStep(1, "Open phone Settings → Accessibility → Installed apps.")
                 Spacer(Modifier.height(6.dp))
-                NumberedStep(2, "Find OffPay → toggle ON → confirm the dialog.")
+                NumberedStep(2, "Find AHD → toggle ON → confirm the dialog.")
                 Spacer(Modifier.height(6.dp))
-                NumberedStep(3, "Come back to OffPay. The tile should show GRANTED.")
+                NumberedStep(3, "Come back to AHD. The tile should show GRANTED.")
                 Spacer(Modifier.height(14.dp))
                 NeoPopSecondaryButton(
                     text = "Open Accessibility Settings",
@@ -251,7 +251,7 @@ fun FaqScreen(
                 accentColor = NeoPopColors.Danger
             ) {
                 Text(
-                    text = "Since OffPay is sideloaded (not from Play Store), Android 13+ blocks restricted settings by default. Same reason you had to disable Play Protect — it's a mandatory Google security measure.",
+                    text = "Since AHD is sideloaded (not from Play Store), Android 13+ blocks restricted settings by default. Same reason you had to disable Play Protect — it's a mandatory Google security measure.",
                     style = NeoPopType.BodyMedium,
                     color = NeoPopColors.TextSecondary
                 )
@@ -262,13 +262,13 @@ fun FaqScreen(
                     color = NeoPopColors.Accent
                 )
                 Spacer(Modifier.height(8.dp))
-                NumberedStep(1, "Settings → Apps → OffPay")
+                NumberedStep(1, "Settings → Apps → AHD")
                 Spacer(Modifier.height(6.dp))
                 NumberedStep(2, "Tap the ⋮ three dots (top right)")
                 Spacer(Modifier.height(6.dp))
                 NumberedStep(3, "\"Allow restricted settings\" → confirm with PIN", emphasised = true)
                 Spacer(Modifier.height(6.dp))
-                NumberedStep(4, "Open OffPay → enable Accessibility")
+                NumberedStep(4, "Open AHD → enable Accessibility")
                 Spacer(Modifier.height(14.dp))
                 NeoPopSecondaryButton(
                     text = "View Guide with Screenshots",
@@ -297,7 +297,7 @@ fun FaqScreen(
             ExpandableQuestion(question = "What are the two modes?") {
                 ModeRow(
                     name = "Auto",
-                    desc = "Default. OffPay handles the carrier dialog automatically — you stay in OffPay throughout."
+                    desc = "Default. AHD handles the carrier dialog automatically — you stay in AHD throughout."
                 )
                 Spacer(Modifier.height(10.dp))
                 ModeRow(
@@ -309,7 +309,7 @@ fun FaqScreen(
             // 8. Overlay
             ExpandableQuestion(question = "How does the overlay work?") {
                 Text(
-                    text = "OffPay drives the carrier's USSD dialog automatically using Android's accessibility service. We never see your PIN — it's typed locally on your device, never stored, and never sent to any server.",
+                    text = "AHD drives the carrier's USSD dialog automatically using Android's accessibility service. We never see your PIN — it's typed locally on your device, never stored, and never sent to any server.",
                     style = NeoPopType.BodyMedium,
                     color = NeoPopColors.TextSecondary
                 )
@@ -336,7 +336,7 @@ fun FaqScreen(
             // 11. Network Security Risks
             ExpandableQuestion(question = "What are the network security risks of USSD?") {
                 Text(
-                    text = "USSD (*99#) signaling occurs over the unencrypted GSM voice channel, meaning it is not encrypted end-to-end like HTTPS. This makes it theoretically vulnerable to carrier-level interception, SIM swapping, and base station spoofing (IMSI catchers). OffPay has no control over cellular protocol security; users should operate with normal cellular safety precautions.",
+                    text = "USSD (*99#) signaling occurs over the unencrypted GSM voice channel, meaning it is not encrypted end-to-end like HTTPS. This makes it theoretically vulnerable to carrier-level interception, SIM swapping, and base station spoofing (IMSI catchers). AHD has no control over cellular protocol security; users should operate with normal cellular safety precautions.",
                     style = NeoPopType.BodyMedium,
                     color = NeoPopColors.TextSecondary
                 )
@@ -345,7 +345,7 @@ fun FaqScreen(
             // 12. Clipboard Hijacking
             ExpandableQuestion(question = "Can other apps steal details from the clipboard?") {
                 Text(
-                    text = "In Manual Mode, OffPay copies details (like the recipient's UPI ID) to the system clipboard. If your device has malicious applications installed, they may perform clipboard hijacking to read or alter copied text. Always verify the recipient's name on the carrier's final confirmation screen before entering your PIN.",
+                    text = "In Manual Mode, AHD copies details (like the recipient's UPI ID) to the system clipboard. If your device has malicious applications installed, they may perform clipboard hijacking to read or alter copied text. Always verify the recipient's name on the carrier's final confirmation screen before entering your PIN.",
                     style = NeoPopType.BodyMedium,
                     color = NeoPopColors.TextSecondary
                 )
@@ -354,7 +354,7 @@ fun FaqScreen(
             // 13. Screen Recording / Casting Risks
             ExpandableQuestion(question = "Is it safe to enter my PIN during screen share?") {
                 Text(
-                    text = "No. Since OffPay works entirely offline, it cannot monitor or block active screen recording, casting, or remote-desktop apps (AnyDesk, Zoom, TeamViewer). If you enter your PIN while sharing your screen, your PIN could be visually compromised. Ensure all sharing/recording is stopped before initiating a payment.",
+                    text = "No. Since AHD works entirely offline, it cannot monitor or block active screen recording, casting, or remote-desktop apps (AnyDesk, Zoom, TeamViewer). If you enter your PIN while sharing your screen, your PIN could be visually compromised. Ensure all sharing/recording is stopped before initiating a payment.",
                     style = NeoPopType.BodyMedium,
                     color = NeoPopColors.TextSecondary
                 )

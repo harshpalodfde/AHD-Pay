@@ -249,7 +249,7 @@ class OverlayControllerImpl(private val context: Context) : OverlayController {
         }
 
         val brand = TextView(context).apply {
-            text = "OFFPAY"
+            text = "AHD"
             setTextColor(NEOPOP_ACCENT)
             setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f)
             letterSpacing = 0.18f
